@@ -9,5 +9,11 @@
 import UIKit
 
 class DaySchedule: NSObject {
-
+    let date: Date
+    var meals: [(Type: Meal.MealType, Meal)]
+    
+    init(date: Date, meals: [(Type: Meal.MealType, Meal)]) {
+        self.date = date
+        self.meals = meals
+    }
 }

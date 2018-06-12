@@ -15,6 +15,11 @@
 		BED9CD1820CEADD500C716CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED9CD1620CEADD500C716CB /* LaunchScreen.storyboard */; };
 		BED9CD2320CEADD500C716CB /* MiniChanllengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD2220CEADD500C716CB /* MiniChanllengeTests.swift */; };
 		BED9CD2E20CEADD500C716CB /* MiniChanllengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD2D20CEADD500C716CB /* MiniChanllengeUITests.swift */; };
+		BED9CD3C20CEAE3100C716CB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD3B20CEAE3000C716CB /* User.swift */; };
+		BED9CD3E20CEB00B00C716CB /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD3D20CEB00B00C716CB /* Meal.swift */; };
+		BED9CD4020CEB20000C716CB /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD3F20CEB20000C716CB /* Food.swift */; };
+		BED9CD4220CEB29500C716CB /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD4120CEB29500C716CB /* Recipe.swift */; };
+		BED9CD4420CEB42600C716CB /* DaySchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD4320CEB42600C716CB /* DaySchedule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		BED9CD2920CEADD500C716CB /* MiniChanllengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniChanllengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BED9CD2D20CEADD500C716CB /* MiniChanllengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniChanllengeUITests.swift; sourceTree = "<group>"; };
 		BED9CD2F20CEADD500C716CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BED9CD3B20CEAE3000C716CB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BED9CD3D20CEB00B00C716CB /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		BED9CD3F20CEB20000C716CB /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		BED9CD4120CEB29500C716CB /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		BED9CD4320CEB42600C716CB /* DaySchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySchedule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +112,11 @@
 				BED9CD0A20CEADD400C716CB /* AppDelegate.swift */,
 				BED9CD0C20CEADD400C716CB /* ViewController.swift */,
 				BED9CD0E20CEADD400C716CB /* Main.storyboard */,
+				BED9CD3B20CEAE3000C716CB /* User.swift */,
+				BED9CD4320CEB42600C716CB /* DaySchedule.swift */,
+				BED9CD3F20CEB20000C716CB /* Food.swift */,
+				BED9CD3D20CEB00B00C716CB /* Meal.swift */,
+				BED9CD4120CEB29500C716CB /* Recipe.swift */,
 				BED9CD1420CEADD500C716CB /* Assets.xcassets */,
 				BED9CD1620CEADD500C716CB /* LaunchScreen.storyboard */,
 				BED9CD1920CEADD500C716CB /* Info.plist */,
@@ -262,9 +277,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BED9CD3E20CEB00B00C716CB /* Meal.swift in Sources */,
+				BED9CD3C20CEAE3100C716CB /* User.swift in Sources */,
+				BED9CD4220CEB29500C716CB /* Recipe.swift in Sources */,
 				BED9CD1320CEADD500C716CB /* MiniChanllenge.xcdatamodeld in Sources */,
 				BED9CD0D20CEADD400C716CB /* ViewController.swift in Sources */,
 				BED9CD0B20CEADD400C716CB /* AppDelegate.swift in Sources */,
+				BED9CD4020CEB20000C716CB /* Food.swift in Sources */,
+				BED9CD4420CEB42600C716CB /* DaySchedule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +451,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V9L5FA66L3;
 				INFOPLIST_FILE = MiniChanllenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.MiniChanllenge;
@@ -445,6 +466,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V9L5FA66L3;
 				INFOPLIST_FILE = MiniChanllenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.MiniChanllenge;
