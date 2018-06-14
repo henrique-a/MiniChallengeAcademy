@@ -11,9 +11,9 @@ import UIKit
 class Food: NSObject {
     let name: String
     let price: Float
-    let nutricionalInformations: Dictionary<String, Float>
+    let nutricionalInformations: [(Name:String, Value: Float)]
     
-    init(name: String, price: Float, nutricionalInformations: Dictionary<String, Float>) {
+    init(name: String, price: Float, nutricionalInformations: [(Name:String, Value: Float)]) {
         self.name = name
         self.price = price
         self.nutricionalInformations = nutricionalInformations

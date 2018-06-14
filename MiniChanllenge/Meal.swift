@@ -19,11 +19,11 @@ class Meal: NSObject {
     }
     
     let name: String
-    let nutricionalInformations: Dictionary<String,Float>
+    let nutricionalInformations: [(Name:String, Value: Float)]
     let recipe: Recipe
     let type: MealType
     
-    init(name: String, nutricionalInformations: Dictionary<String,Float>,  recipe: Recipe, type: MealType) {
+    init(name: String, nutricionalInformations: [(Name:String, Value: Float)],  recipe: Recipe, type: MealType) {
         self.name = name
         self.nutricionalInformations = nutricionalInformations
         self.recipe = recipe
