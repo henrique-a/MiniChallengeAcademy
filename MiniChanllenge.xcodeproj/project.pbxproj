@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2B4496F020D3F76B00BC556F /* Maven_Pro in Resources */ = {isa = PBXBuildFile; fileRef = 2B4496EE20D3F76B00BC556F /* Maven_Pro */; };
 		2B4496F120D3F76B00BC556F /* Raleway in Resources */ = {isa = PBXBuildFile; fileRef = 2B4496EF20D3F76B00BC556F /* Raleway */; };
+		BEA12D4720D3F9080015A526 /* Cibele.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEA12D4620D3F9080015A526 /* Cibele.storyboard */; };
 		BED9CD0B20CEADD400C716CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD0A20CEADD400C716CB /* AppDelegate.swift */; };
 		BED9CD0D20CEADD400C716CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD0C20CEADD400C716CB /* ViewController.swift */; };
 		BED9CD1020CEADD400C716CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED9CD0E20CEADD400C716CB /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		2B4496EE20D3F76B00BC556F /* Maven_Pro */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Maven_Pro; sourceTree = "<group>"; };
 		2B4496EF20D3F76B00BC556F /* Raleway */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Raleway; sourceTree = "<group>"; };
+		BEA12D4620D3F9080015A526 /* Cibele.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cibele.storyboard; sourceTree = "<group>"; };
 		BED9CD0720CEADD400C716CB /* MiniChanllenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniChanllenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BED9CD0A20CEADD400C716CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BED9CD0C20CEADD400C716CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				BED9CD0A20CEADD400C716CB /* AppDelegate.swift */,
 				BED9CD0C20CEADD400C716CB /* ViewController.swift */,
 				BED9CD0E20CEADD400C716CB /* Main.storyboard */,
+				BEA12D4620D3F9080015A526 /* Cibele.storyboard */,
 				BED9CD3B20CEAE3000C716CB /* User.swift */,
 				BED9CD4320CEB42600C716CB /* DaySchedule.swift */,
 				BED9CD3F20CEB20000C716CB /* Food.swift */,
@@ -264,6 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEA12D4720D3F9080015A526 /* Cibele.storyboard in Resources */,
 				2B4496F020D3F76B00BC556F /* Maven_Pro in Resources */,
 				2B4496F120D3F76B00BC556F /* Raleway in Resources */,
 				BED9CD1820CEADD500C716CB /* LaunchScreen.storyboard in Resources */,
