@@ -7,9 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B4496F020D3F76B00BC556F /* Maven_Pro in Resources */ = {isa = PBXBuildFile; fileRef = 2B4496EE20D3F76B00BC556F /* Maven_Pro */; };
-		2B4496F120D3F76B00BC556F /* Raleway in Resources */ = {isa = PBXBuildFile; fileRef = 2B4496EF20D3F76B00BC556F /* Raleway */; };
 		2B4496F320D3F96B00BC556F /* Paulo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B4496F220D3F96B00BC556F /* Paulo.storyboard */; };
+		2B4496F820D3FBA300BC556F /* PlanejamentoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4496F720D3FBA300BC556F /* PlanejamentoViewController.swift */; };
+		2B44970820D405E200BC556F /* Maven_Pro in Resources */ = {isa = PBXBuildFile; fileRef = 2B44970620D405E200BC556F /* Maven_Pro */; };
+		2B44970920D405E200BC556F /* Raleway in Resources */ = {isa = PBXBuildFile; fileRef = 2B44970720D405E200BC556F /* Raleway */; };
+		2B71748820D40827004EC19A /* MavenPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B71748620D40827004EC19A /* MavenPro-Bold.ttf */; };
+		2B71748920D40827004EC19A /* MavenPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B71748720D40827004EC19A /* MavenPro-Regular.ttf */; };
+		2B71748E20D40834004EC19A /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B71748A20D40834004EC19A /* Raleway-Bold.ttf */; };
+		2B71748F20D40834004EC19A /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B71748B20D40834004EC19A /* Raleway-Regular.ttf */; };
+		2B71749020D40834004EC19A /* Raleway-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B71748C20D40834004EC19A /* Raleway-Light.ttf */; };
+		2B71749120D40834004EC19A /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B71748D20D40834004EC19A /* Raleway-Medium.ttf */; };
 		BEA12D4720D3F9080015A526 /* Cibele.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEA12D4620D3F9080015A526 /* Cibele.storyboard */; };
 		BED9CD0B20CEADD400C716CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD0A20CEADD400C716CB /* AppDelegate.swift */; };
 		BED9CD0D20CEADD400C716CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD0C20CEADD400C716CB /* ViewController.swift */; };
@@ -44,9 +51,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2B4496EE20D3F76B00BC556F /* Maven_Pro */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Maven_Pro; sourceTree = "<group>"; };
-		2B4496EF20D3F76B00BC556F /* Raleway */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Raleway; sourceTree = "<group>"; };
 		2B4496F220D3F96B00BC556F /* Paulo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Paulo.storyboard; sourceTree = "<group>"; };
+		2B4496F720D3FBA300BC556F /* PlanejamentoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanejamentoViewController.swift; sourceTree = "<group>"; };
+		2B44970620D405E200BC556F /* Maven_Pro */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Maven_Pro; sourceTree = "<group>"; };
+		2B44970720D405E200BC556F /* Raleway */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Raleway; sourceTree = "<group>"; };
+		2B71748620D40827004EC19A /* MavenPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MavenPro-Bold.ttf"; path = "fonts/Maven_Pro/MavenPro-Bold.ttf"; sourceTree = "<group>"; };
+		2B71748720D40827004EC19A /* MavenPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MavenPro-Regular.ttf"; path = "fonts/Maven_Pro/MavenPro-Regular.ttf"; sourceTree = "<group>"; };
+		2B71748A20D40834004EC19A /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Bold.ttf"; path = "fonts/Raleway/Raleway-Bold.ttf"; sourceTree = "<group>"; };
+		2B71748B20D40834004EC19A /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Regular.ttf"; path = "fonts/Raleway/Raleway-Regular.ttf"; sourceTree = "<group>"; };
+		2B71748C20D40834004EC19A /* Raleway-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Light.ttf"; path = "fonts/Raleway/Raleway-Light.ttf"; sourceTree = "<group>"; };
+		2B71748D20D40834004EC19A /* Raleway-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Medium.ttf"; path = "fonts/Raleway/Raleway-Medium.ttf"; sourceTree = "<group>"; };
 		BEA12D4620D3F9080015A526 /* Cibele.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cibele.storyboard; sourceTree = "<group>"; };
 		BED9CD0720CEADD400C716CB /* MiniChanllenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniChanllenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BED9CD0A20CEADD400C716CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,11 +108,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2B4496E720D3F53900BC556F /* fonts */ = {
+		2B4496F620D3FB7500BC556F /* FrontEnd */ = {
 			isa = PBXGroup;
 			children = (
-				2B4496EE20D3F76B00BC556F /* Maven_Pro */,
-				2B4496EF20D3F76B00BC556F /* Raleway */,
+				2B4496F220D3F96B00BC556F /* Paulo.storyboard */,
+				2B4496F720D3FBA300BC556F /* PlanejamentoViewController.swift */,
+			);
+			name = FrontEnd;
+			sourceTree = "<group>";
+		};
+		2B71748020D406F3004EC19A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2B71748620D40827004EC19A /* MavenPro-Bold.ttf */,
+				2B71748A20D40834004EC19A /* Raleway-Bold.ttf */,
+				2B71748C20D40834004EC19A /* Raleway-Light.ttf */,
+				2B71748D20D40834004EC19A /* Raleway-Medium.ttf */,
+				2B71748B20D40834004EC19A /* Raleway-Regular.ttf */,
+				2B71748720D40827004EC19A /* MavenPro-Regular.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		2B71748520D407FE004EC19A /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2B44970620D405E200BC556F /* Maven_Pro */,
+				2B44970720D405E200BC556F /* Raleway */,
 			);
 			path = fonts;
 			sourceTree = "<group>";
@@ -126,17 +162,18 @@
 		BED9CD0920CEADD400C716CB /* MiniChanllenge */ = {
 			isa = PBXGroup;
 			children = (
+				2B71748020D406F3004EC19A /* Fonts */,
 				BED9CD0A20CEADD400C716CB /* AppDelegate.swift */,
+				2B4496F620D3FB7500BC556F /* FrontEnd */,
 				BED9CD0C20CEADD400C716CB /* ViewController.swift */,
 				BED9CD0E20CEADD400C716CB /* Main.storyboard */,
 				BEA12D4620D3F9080015A526 /* Cibele.storyboard */,
-				2B4496F220D3F96B00BC556F /* Paulo.storyboard */,
 				BED9CD3B20CEAE3000C716CB /* User.swift */,
 				BED9CD4320CEB42600C716CB /* DaySchedule.swift */,
 				BED9CD3F20CEB20000C716CB /* Food.swift */,
 				BED9CD3D20CEB00B00C716CB /* Meal.swift */,
 				BED9CD4120CEB29500C716CB /* Recipe.swift */,
-				2B4496E720D3F53900BC556F /* fonts */,
+				2B71748520D407FE004EC19A /* fonts */,
 				BED9CD1420CEADD500C716CB /* Assets.xcassets */,
 				BED9CD1620CEADD500C716CB /* LaunchScreen.storyboard */,
 				BED9CD1920CEADD500C716CB /* Info.plist */,
@@ -271,12 +308,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEA12D4720D3F9080015A526 /* Cibele.storyboard in Resources */,
-				2B4496F020D3F76B00BC556F /* Maven_Pro in Resources */,
+				2B71749120D40834004EC19A /* Raleway-Medium.ttf in Resources */,
 				2B4496F320D3F96B00BC556F /* Paulo.storyboard in Resources */,
-				2B4496F120D3F76B00BC556F /* Raleway in Resources */,
 				BED9CD1820CEADD500C716CB /* LaunchScreen.storyboard in Resources */,
+				2B71749020D40834004EC19A /* Raleway-Light.ttf in Resources */,
+				2B71748E20D40834004EC19A /* Raleway-Bold.ttf in Resources */,
+				2B71748820D40827004EC19A /* MavenPro-Bold.ttf in Resources */,
 				BED9CD1520CEADD500C716CB /* Assets.xcassets in Resources */,
+				2B44970820D405E200BC556F /* Maven_Pro in Resources */,
 				BED9CD1020CEADD400C716CB /* Main.storyboard in Resources */,
+				2B71748920D40827004EC19A /* MavenPro-Regular.ttf in Resources */,
+				2B71748F20D40834004EC19A /* Raleway-Regular.ttf in Resources */,
+				2B44970920D405E200BC556F /* Raleway in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +351,7 @@
 				BED9CD0D20CEADD400C716CB /* ViewController.swift in Sources */,
 				BED9CD0B20CEADD400C716CB /* AppDelegate.swift in Sources */,
 				BED9CD4020CEB20000C716CB /* Food.swift in Sources */,
+				2B4496F820D3FBA300BC556F /* PlanejamentoViewController.swift in Sources */,
 				BED9CD4420CEB42600C716CB /* DaySchedule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
