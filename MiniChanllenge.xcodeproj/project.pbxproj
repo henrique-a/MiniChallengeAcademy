@@ -139,6 +139,14 @@
 			path = fonts;
 			sourceTree = "<group>";
 		};
+		BEA12D5120D40C290015A526 /* FrontEnd2 */ = {
+			isa = PBXGroup;
+			children = (
+				BEA12D4620D3F9080015A526 /* Cibele.storyboard */,
+			);
+			name = FrontEnd2;
+			sourceTree = "<group>";
+		};
 		BED9CCFE20CEADD400C716CB = {
 			isa = PBXGroup;
 			children = (
@@ -167,8 +175,8 @@
 				2B4496F620D3FB7500BC556F /* FrontEnd */,
 				BED9CD0C20CEADD400C716CB /* ViewController.swift */,
 				BED9CD0E20CEADD400C716CB /* Main.storyboard */,
-				BEA12D4620D3F9080015A526 /* Cibele.storyboard */,
 				BED9CD3B20CEAE3000C716CB /* User.swift */,
+				BEA12D5120D40C290015A526 /* FrontEnd2 */,
 				BED9CD4320CEB42600C716CB /* DaySchedule.swift */,
 				BED9CD3F20CEB20000C716CB /* Food.swift */,
 				BED9CD3D20CEB00B00C716CB /* Meal.swift */,
