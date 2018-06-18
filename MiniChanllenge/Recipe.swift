@@ -8,15 +8,24 @@
 
 import UIKit
 
-class Recipe: NSObject {
-    let ingridients: [(Food: Food, Quantity: Float)]
-    let howToPrepare: String
-    let time: Int
+class Recipe: Decodable {
+    var name: String = "teste"
+    //    let ingridients: [(Food: Food, Quantity: Float)]
+    var howToPrepare: String = ""
+    var timeToPrepare: Int = 0
+    var portions: Int = 0
     
-    init(ingridients: [(Food: Food, Quantity: Float)], howToPrepare: String, time: Int) {
-        self.ingridients = ingridients
-        self.howToPrepare = howToPrepare
-        self.time = time
-    }
+    //    init(ingridients: [(Food: Food, Quantity: Float)], howToPrepare: String, time: Int) {
+    //        self.ingridients = ingridients
+    //        self.howToPrepare = howToPrepare
+    //        self.time = time
+    //    }
     
+    //    init(json: [String: Any]) {
+    //        self.name = json["name"] as? String ?? ""
+    ////        self.ingridients = json["ingridients"] as?
+    //        self.howToPrepare = json["howToPrepare"] as? String ?? ""
+    //        self.time = json["time"] as? Int ?? 0
+    //        self.portions = json["portions"] as? Int ?? 0
+    //    }
 }

@@ -19,9 +19,9 @@ class User: NSObject {
     let name: String
     let buyingFrequency: Frequency
     var favorites: [Meal]
-    var groceryList: [Food]
+    var groceryList: [Ingridient]
     
-    init(name: String, buyingFrequency: Frequency, favorites: [Meal], groceryList: [Food]) {
+    init(name: String, buyingFrequency: Frequency, favorites: [Meal], groceryList: [Ingridient]) {
         self.name = name
         self.buyingFrequency = buyingFrequency
         self.favorites = favorites
