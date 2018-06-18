@@ -47,7 +47,7 @@ class LabelFormatter {
     
     static func estiloDeDiasDaSemana (parameter: UILabel, text: String, x: Int, y: Int) -> UILabel {
         
-        parameter.font = UIFont (name: "Raleway-mEDIUM", size: 16)
+        parameter.font = UIFont (name: "Raleway-Medium", size: 16)
         parameter.text = text
         parameter.textAlignment = .left
         //parameter.frame = CGRect (x: x, y: y, width: 153, height: 26)
