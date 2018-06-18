@@ -37,8 +37,11 @@ class ViewController: UIViewController {
             guard let data = data else { return }
             do {
                 self.recipes = try JSONDecoder().decode([Recipe].self, from: data)
+//                for recipe in self.recipes {
+//                    recipe.ingridients = try JSONDecoder().decode([Ingridient].self, from: data)
+//                }
                 for recipe in self.recipes {
-                    print(recipe.howToPrepare)
+                    print(recipe.ingridients[0].quantity)
                 }
             } catch {
                 
