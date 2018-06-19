@@ -34,7 +34,7 @@
 		BED9CD2E20CEADD500C716CB /* MiniChanllengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD2D20CEADD500C716CB /* MiniChanllengeUITests.swift */; };
 		BED9CD3C20CEAE3100C716CB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD3B20CEAE3000C716CB /* User.swift */; };
 		BED9CD3E20CEB00B00C716CB /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD3D20CEB00B00C716CB /* Meal.swift */; };
-		BED9CD4020CEB20000C716CB /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD3F20CEB20000C716CB /* Food.swift */; };
+		BED9CD4020CEB20000C716CB /* Ingridient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD3F20CEB20000C716CB /* Ingridient.swift */; };
 		BED9CD4220CEB29500C716CB /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD4120CEB29500C716CB /* Recipe.swift */; };
 		BED9CD4420CEB42600C716CB /* DaySchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD4320CEB42600C716CB /* DaySchedule.swift */; };
 /* End PBXBuildFile section */
@@ -90,7 +90,7 @@
 		BED9CD2F20CEADD500C716CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BED9CD3B20CEAE3000C716CB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BED9CD3D20CEB00B00C716CB /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
-		BED9CD3F20CEB20000C716CB /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		BED9CD3F20CEB20000C716CB /* Ingridient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingridient.swift; sourceTree = "<group>"; };
 		BED9CD4120CEB29500C716CB /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		BED9CD4320CEB42600C716CB /* DaySchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySchedule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -220,7 +220,7 @@
 				BED9CD3B20CEAE3000C716CB /* User.swift */,
 				BEA12D5120D40C290015A526 /* FrontEnd2 */,
 				BED9CD4320CEB42600C716CB /* DaySchedule.swift */,
-				BED9CD3F20CEB20000C716CB /* Food.swift */,
+				BED9CD3F20CEB20000C716CB /* Ingridient.swift */,
 				BED9CD3D20CEB00B00C716CB /* Meal.swift */,
 				BED9CD4120CEB29500C716CB /* Recipe.swift */,
 				2B71748520D407FE004EC19A /* fonts */,
@@ -406,7 +406,7 @@
 				BED9CD0B20CEADD400C716CB /* AppDelegate.swift in Sources */,
 				BEA12D5720D43D050015A526 /* ButtonFormatter.swift in Sources */,
 				BEA12D5E20D458A10015A526 /* ShoppingListViewController.swift in Sources */,
-				BED9CD4020CEB20000C716CB /* Food.swift in Sources */,
+				BED9CD4020CEB20000C716CB /* Ingridient.swift in Sources */,
 				2B4496F820D3FBA300BC556F /* PlanejamentoViewController.swift in Sources */,
 				BED9CD4420CEB42600C716CB /* DaySchedule.swift in Sources */,
 			);
