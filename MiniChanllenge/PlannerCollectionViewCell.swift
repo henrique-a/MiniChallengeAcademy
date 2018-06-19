@@ -16,7 +16,8 @@ class PlannerCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        
+        self.backgroundColor = #colorLiteral(red: 0.949000001, green: 0.9449999928, blue: 0.9449999928, alpha: 1)
+        self.layer.cornerRadius = 12
         
     }
    
