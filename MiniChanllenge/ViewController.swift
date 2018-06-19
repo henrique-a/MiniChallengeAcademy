@@ -44,11 +44,10 @@ class ViewController: UIViewController {
             guard let data = data else { return }
             do {
                 let recipes: [Recipe] = try JSONDecoder().decode([Recipe].self, from: data)
-                
-                completionHandler(recipes)
-                
-                self.saveData(recipes: recipes)
-                
+                DispatchQueue.main.async {
+                    completionHandler(recipes)
+                    self.saveData(recipes: recipes)
+                }
             } catch {
                 
             }
@@ -56,12 +55,10 @@ class ViewController: UIViewController {
     }
     
     func saveData(recipes: [Recipe]) {
-        DispatchQueue.main.async { // Make sure you're on the main thread here
-            let imageView = UIImageView(frame: CGRect(x:0, y:0, width:200, height:200))
-            imageView.contentMode = UIViewContentMode.scaleAspectFit
-            self.view.addSubview(imageView)
-            imageView.image = recipes[0].image
-        }
+        let imageView = UIImageView(frame: CGRect(x:0, y:0, width:200, height:200))
+        imageView.contentMode = UIViewContentMode.scaleAspectFit
+        self.view.addSubview(imageView)
+        imageView.image = recipes[0].image
     }
     
     
