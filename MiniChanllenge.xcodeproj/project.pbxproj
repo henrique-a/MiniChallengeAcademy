@@ -432,6 +432,8 @@
 				BEA12D5720D43D050015A526 /* ButtonFormatter.swift in Sources */,
 				BEA12D5E20D458A10015A526 /* ShoppingListViewController.swift in Sources */,
 				BED9CD4020CEB20000C716CB /* Ingridient.swift in Sources */,
+				BEA12D6520D7EF000015A526 /* RecipeViewController.swift in Sources */,
+				BEA12D6A20D922560015A526 /* PlannerCollectionViewCell.swift in Sources */,
 				2B4496F820D3FBA300BC556F /* PlanejamentoViewController.swift in Sources */,
 				BED9CD4420CEB42600C716CB /* DaySchedule.swift in Sources */,
 				BEA12D6820D920F80015A526 /* PlannerViewController.swift in Sources */,
