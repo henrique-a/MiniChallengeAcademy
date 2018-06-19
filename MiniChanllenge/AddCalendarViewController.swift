@@ -64,6 +64,8 @@ extension AddCalendarViewController: UITableViewDataSource, UITableViewDelegate{
         
         cell.txtDay.text = arrayWeek[indexPath.row]
         
+        tvWeek.rowHeight = 80
+        
         return cell
     }
     
