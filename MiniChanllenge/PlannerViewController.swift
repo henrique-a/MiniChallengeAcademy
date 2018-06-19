@@ -16,8 +16,12 @@ class PlannerViewController: UIViewController, UICollectionViewDelegate, UIColle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //collectionPlanner.backgroundColor =
-        collectionPlanner.layer.cornerRadius = 
+//        collectionPlanner.backgroundColor = #colorLiteral(red: 0.8899999857, green: 0.8899999857, blue: 0.8899999857, alpha: 1)
+//        //collectionPlanner.layer.cornerRadius =
+//        collectionPlanner.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+//        //collectionPlanner.layer.shadowOffset =
+//        collectionPlanner.layer.masksToBounds = false
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
