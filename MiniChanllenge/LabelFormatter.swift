@@ -47,7 +47,7 @@ class LabelFormatter {
     
     static func estiloDeDiasDaSemana (parameter: UILabel, text: String, x: Int, y: Int) -> UILabel {
         
-        parameter.font = UIFont (name: "Raleway-mEDIUM", size: 16)
+        parameter.font = UIFont (name: "Raleway-Medium", size: 16)
         parameter.text = text
         parameter.textAlignment = .left
         //parameter.frame = CGRect (x: x, y: y, width: 153, height: 26)
@@ -70,6 +70,28 @@ class LabelFormatter {
     static func estiloDeTextoSimples2 (parameter: UILabel, text: String, x: Int, y: Int) -> UILabel {
         
         parameter.font = UIFont (name: "Raleway-Regular", size: 16)
+        parameter.text = text
+        parameter.textAlignment = .left
+        //parameter.frame = CGRect (x: x, y: y, width: 153, height: 26)
+        parameter.textColor = #colorLiteral(red: 0.4390000105, green: 0.4390000105, blue: 0.4390000105, alpha: 1)
+        
+        return parameter
+    }
+    
+    static func estiloDeTextoNomeReceita (parameter: UILabel, text: String, x: Int, y: Int) -> UILabel {
+        
+        parameter.font = UIFont (name: "MavenPro-Medium", size: 22)
+        parameter.text = text
+        parameter.textAlignment = .left
+        //parameter.frame = CGRect (x: x, y: y, width: 153, height: 26)
+        parameter.textColor = #colorLiteral(red: 0.3449999988, green: 0.5839999914, blue: 0.1920000017, alpha: 1)
+        
+        return parameter
+    }
+    
+    static func estiloDeTextoIngredientes (parameter: UILabel, text: String, x: Int, y: Int) -> UILabel {
+        
+        parameter.font = UIFont (name: "Raleway-Medium", size: 18)
         parameter.text = text
         parameter.textAlignment = .left
         //parameter.frame = CGRect (x: x, y: y, width: 153, height: 26)

@@ -24,6 +24,9 @@
 		BEA12D5B20D444F60015A526 /* AddCalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA12D5A20D444F60015A526 /* AddCalendarTableViewCell.swift */; };
 		BEA12D5E20D458A10015A526 /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA12D5D20D458A10015A526 /* ShoppingListViewController.swift */; };
 		BEA12D6020D45D390015A526 /* ShoppingListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA12D5F20D45D390015A526 /* ShoppingListTableViewCell.swift */; };
+		BEA12D6520D7EF000015A526 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA12D6420D7EF000015A526 /* RecipeViewController.swift */; };
+		BEA12D6820D920F80015A526 /* PlannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA12D6720D920F80015A526 /* PlannerViewController.swift */; };
+		BEA12D6A20D922560015A526 /* PlannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA12D6920D922560015A526 /* PlannerCollectionViewCell.swift */; };
 		BED9CD0B20CEADD400C716CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD0A20CEADD400C716CB /* AppDelegate.swift */; };
 		BED9CD0D20CEADD400C716CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD0C20CEADD400C716CB /* ViewController.swift */; };
 		BED9CD1020CEADD400C716CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED9CD0E20CEADD400C716CB /* Main.storyboard */; };
@@ -74,6 +77,9 @@
 		BEA12D5A20D444F60015A526 /* AddCalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCalendarTableViewCell.swift; sourceTree = "<group>"; };
 		BEA12D5D20D458A10015A526 /* ShoppingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
 		BEA12D5F20D45D390015A526 /* ShoppingListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListTableViewCell.swift; sourceTree = "<group>"; };
+		BEA12D6420D7EF000015A526 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+		BEA12D6720D920F80015A526 /* PlannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerViewController.swift; sourceTree = "<group>"; };
+		BEA12D6920D922560015A526 /* PlannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		BED9CD0720CEADD400C716CB /* MiniChanllenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniChanllenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BED9CD0A20CEADD400C716CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BED9CD0C20CEADD400C716CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +160,8 @@
 		BEA12D5120D40C290015A526 /* FrontEnd2 */ = {
 			isa = PBXGroup;
 			children = (
+				BEA12D6620D920BC0015A526 /* Agenda */,
+				BEA12D6320D7EEC30015A526 /* Receita */,
 				BEA12D5C20D4573A0015A526 /* Lista de Compras */,
 				BEA12D5920D4446B0015A526 /* Adicionar na Agenda */,
 				BEA12D5820D441AB0015A526 /* Components Formatter */,
@@ -187,6 +195,23 @@
 				BEA12D5F20D45D390015A526 /* ShoppingListTableViewCell.swift */,
 			);
 			name = "Lista de Compras";
+			sourceTree = "<group>";
+		};
+		BEA12D6320D7EEC30015A526 /* Receita */ = {
+			isa = PBXGroup;
+			children = (
+				BEA12D6420D7EF000015A526 /* RecipeViewController.swift */,
+			);
+			name = Receita;
+			sourceTree = "<group>";
+		};
+		BEA12D6620D920BC0015A526 /* Agenda */ = {
+			isa = PBXGroup;
+			children = (
+				BEA12D6720D920F80015A526 /* PlannerViewController.swift */,
+				BEA12D6920D922560015A526 /* PlannerCollectionViewCell.swift */,
+			);
+			name = Agenda;
 			sourceTree = "<group>";
 		};
 		BED9CCFE20CEADD400C716CB = {
@@ -406,9 +431,13 @@
 				BED9CD0B20CEADD400C716CB /* AppDelegate.swift in Sources */,
 				BEA12D5720D43D050015A526 /* ButtonFormatter.swift in Sources */,
 				BEA12D5E20D458A10015A526 /* ShoppingListViewController.swift in Sources */,
-				BED9CD4020CEB20000C716CB /* Ingridient.swift in Sources */,
+				BEA12D6520D7EF000015A526 /* RecipeViewController.swift in Sources */,
+				BEA12D6A20D922560015A526 /* PlannerCollectionViewCell.swift in Sources */,
+				BED9CD4020CEB20000C716CB /* Food.swift in Sources */,
+
 				2B4496F820D3FBA300BC556F /* PlanejamentoViewController.swift in Sources */,
 				BED9CD4420CEB42600C716CB /* DaySchedule.swift in Sources */,
+				BEA12D6820D920F80015A526 /* PlannerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
