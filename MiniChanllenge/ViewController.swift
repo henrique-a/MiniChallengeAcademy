@@ -10,10 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var recipes:[Recipe] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
-        getData()
+        getData() { (response) in
+            if let responseArray = response as? [Recipe] {
+                self.recipes = responseArray
+            }
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -26,27 +33,35 @@ class ViewController: UIViewController {
         case invalid(String, Any )
     }
     
-    var recipes:[Recipe] = []
     
-    func getData() {
+    func getData(completionHandler: @escaping ([Recipe]) -> Void) {
         let jsonURL = "https://henriqueapi.herokuapp.com/recipes/?format=json"
-        
+
         guard let url = URL(string: jsonURL) else { return }
         
         URLSession.shared.dataTask(with: url) { (data, response, err)  in
+            
             guard let data = data else { return }
             do {
-                self.recipes = try JSONDecoder().decode([Recipe].self, from: data)
-//                for recipe in self.recipes {
-//                    recipe.ingridients = try JSONDecoder().decode([Ingridient].self, from: data)
-//                }
-                for recipe in self.recipes {
-                    print(recipe.ingridients[0].quantity)
-                }
+                let recipes: [Recipe] = try JSONDecoder().decode([Recipe].self, from: data)
+                
+                completionHandler(recipes)
+                
+                self.saveData(recipes: recipes)
+                
             } catch {
                 
             }
             }.resume()
+    }
+    
+    func saveData(recipes: [Recipe]) {
+        DispatchQueue.main.async { // Make sure you're on the main thread here
+            let imageView = UIImageView(frame: CGRect(x:0, y:0, width:200, height:200))
+            imageView.contentMode = UIViewContentMode.scaleAspectFit
+            self.view.addSubview(imageView)
+            imageView.image = recipes[0].image
+        }
     }
     
     
