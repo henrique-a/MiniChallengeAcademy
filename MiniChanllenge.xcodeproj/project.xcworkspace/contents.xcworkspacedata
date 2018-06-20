@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:MiniChanllenge.xcodeproj">
+      location = "group:/Users/ada2018/Desktop/Academy/MiniChallengeAcademy/MiniChanllenge/CoreData">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>
