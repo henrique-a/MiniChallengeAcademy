@@ -10,17 +10,37 @@ import UIKit
 
 class PlannerViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
-
+    @IBOutlet weak var txtPlanner: UILabel!
+    @IBOutlet weak var btnList: UIButton!
+    
+    @IBOutlet weak var tvPlanner: UITableView!
     @IBOutlet weak var collectionPlanner: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Background Config
+        self.view.backgroundColor = #colorLiteral(red: 0.8899999857, green: 0.8899999857, blue: 0.8899999857, alpha: 1)
         
-//        collectionPlanner.backgroundColor = #colorLiteral(red: 0.8899999857, green: 0.8899999857, blue: 0.8899999857, alpha: 1)
-//        //collectionPlanner.layer.cornerRadius =
-//        collectionPlanner.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-//        //collectionPlanner.layer.shadowOffset =
-//        collectionPlanner.layer.masksToBounds = false
+        //Collection Config
+        collectionPlanner.backgroundColor = #colorLiteral(red: 0.8899999857, green: 0.8899999857, blue: 0.8899999857, alpha: 1)
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize (width: 45, height: 45)
+        layout.minimumLineSpacing = CGFloat(8)
+        layout.minimumInteritemSpacing = CGFloat(8)
+        layout.scrollDirection = .horizontal
+        self.collectionPlanner.collectionViewLayout = layout
+        
+        //Label's Config
+        txtPlanner = LabelFormatter.estiloDeCabecalhoDaPagina(parameter: txtPlanner, text: "Agenda", x: 0, y: 0)
+        
+        //Button Config
+        btnList.setImage(#imageLiteral(resourceName: "symbol271.png") , for: .normal)
+        btnList.tintColor = #colorLiteral(red: 0.3449999988, green: 0.5839999914, blue: 0.1920000017, alpha: 1)
+        
+        //Table View Config
+        self.tvPlanner.backgroundColor = #colorLiteral(red: 0.8899999857, green: 0.8899999857, blue: 0.8899999857, alpha: 1)
+        self.tvPlanner.dataSource = self
+        self.tvPlanner.delegate = self
         
     }
     
@@ -56,4 +76,24 @@ class PlannerViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     */
 
+}
+
+extension PlannerViewController: UITableViewDataSource, UITableViewDelegate{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 6
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tvPlanner.dequeueReusableCell(withIdentifier: "PlannerTableView") as! PlannerTableViewCell
+        
+        cell.txtMeal.text = "Café da Manhã"
+        cell.txtTime.text = "07:00"
+        cell.txtMealDetails.text = "Vitamina de Banana"
+        cell.btnAddMeal.setTitle("Adicionar", for: .normal)
+        cell.btnCheckMeal.setTitle("", for: .normal)
+        cell.selectionStyle = .none
+
+        tvPlanner.rowHeight = 120
+        return cell
+    }
 }

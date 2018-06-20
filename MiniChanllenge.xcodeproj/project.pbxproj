@@ -27,6 +27,11 @@
 		BEA12D6520D7EF000015A526 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA12D6420D7EF000015A526 /* RecipeViewController.swift */; };
 		BEA12D6820D920F80015A526 /* PlannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA12D6720D920F80015A526 /* PlannerViewController.swift */; };
 		BEA12D6A20D922560015A526 /* PlannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA12D6920D922560015A526 /* PlannerCollectionViewCell.swift */; };
+		BEC326A520D93F2800DA05FC /* PlannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC326A420D93F2800DA05FC /* PlannerTableViewCell.swift */; };
+		BEC326A820D9791700DA05FC /* AddReceiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC326A720D9791700DA05FC /* AddReceiveViewController.swift */; };
+		BEC326AA20D9795E00DA05FC /* AddReceiveCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC326A920D9795E00DA05FC /* AddReceiveCollectionViewCell.swift */; };
+		BEC326AC20D9797300DA05FC /* AddReceiveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC326AB20D9797300DA05FC /* AddReceiveTableViewCell.swift */; };
+		BEC326AE20D9AD1700DA05FC /* AddReceive2CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC326AD20D9AD1700DA05FC /* AddReceive2CollectionViewCell.swift */; };
 		BED9CD0B20CEADD400C716CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD0A20CEADD400C716CB /* AppDelegate.swift */; };
 		BED9CD0D20CEADD400C716CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD0C20CEADD400C716CB /* ViewController.swift */; };
 		BED9CD1020CEADD400C716CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED9CD0E20CEADD400C716CB /* Main.storyboard */; };
@@ -80,6 +85,11 @@
 		BEA12D6420D7EF000015A526 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		BEA12D6720D920F80015A526 /* PlannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerViewController.swift; sourceTree = "<group>"; };
 		BEA12D6920D922560015A526 /* PlannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerCollectionViewCell.swift; sourceTree = "<group>"; };
+		BEC326A420D93F2800DA05FC /* PlannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerTableViewCell.swift; sourceTree = "<group>"; };
+		BEC326A720D9791700DA05FC /* AddReceiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReceiveViewController.swift; sourceTree = "<group>"; };
+		BEC326A920D9795E00DA05FC /* AddReceiveCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReceiveCollectionViewCell.swift; sourceTree = "<group>"; };
+		BEC326AB20D9797300DA05FC /* AddReceiveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReceiveTableViewCell.swift; sourceTree = "<group>"; };
+		BEC326AD20D9AD1700DA05FC /* AddReceive2CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReceive2CollectionViewCell.swift; sourceTree = "<group>"; };
 		BED9CD0720CEADD400C716CB /* MiniChanllenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniChanllenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BED9CD0A20CEADD400C716CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BED9CD0C20CEADD400C716CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +170,7 @@
 		BEA12D5120D40C290015A526 /* FrontEnd2 */ = {
 			isa = PBXGroup;
 			children = (
+				BEC326A620D978EC00DA05FC /* Adicionar Receita */,
 				BEA12D6620D920BC0015A526 /* Agenda */,
 				BEA12D6320D7EEC30015A526 /* Receita */,
 				BEA12D5C20D4573A0015A526 /* Lista de Compras */,
@@ -210,8 +221,20 @@
 			children = (
 				BEA12D6720D920F80015A526 /* PlannerViewController.swift */,
 				BEA12D6920D922560015A526 /* PlannerCollectionViewCell.swift */,
+				BEC326A420D93F2800DA05FC /* PlannerTableViewCell.swift */,
 			);
 			name = Agenda;
+			sourceTree = "<group>";
+		};
+		BEC326A620D978EC00DA05FC /* Adicionar Receita */ = {
+			isa = PBXGroup;
+			children = (
+				BEC326A720D9791700DA05FC /* AddReceiveViewController.swift */,
+				BEC326A920D9795E00DA05FC /* AddReceiveCollectionViewCell.swift */,
+				BEC326AB20D9797300DA05FC /* AddReceiveTableViewCell.swift */,
+				BEC326AD20D9AD1700DA05FC /* AddReceive2CollectionViewCell.swift */,
+			);
+			name = "Adicionar Receita";
 			sourceTree = "<group>";
 		};
 		BED9CCFE20CEADD400C716CB = {
@@ -419,6 +442,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEC326A820D9791700DA05FC /* AddReceiveViewController.swift in Sources */,
 				BEA12D6020D45D390015A526 /* ShoppingListTableViewCell.swift in Sources */,
 				BED9CD3E20CEB00B00C716CB /* Meal.swift in Sources */,
 				BEA12D5520D42DBB0015A526 /* LabelFormatter.swift in Sources */,
@@ -429,12 +453,15 @@
 				BED9CD1320CEADD500C716CB /* MiniChanllenge.xcdatamodeld in Sources */,
 				BED9CD0D20CEADD400C716CB /* ViewController.swift in Sources */,
 				BED9CD0B20CEADD400C716CB /* AppDelegate.swift in Sources */,
+				BEC326A520D93F2800DA05FC /* PlannerTableViewCell.swift in Sources */,
+				BEC326AE20D9AD1700DA05FC /* AddReceive2CollectionViewCell.swift in Sources */,
+				BEC326AA20D9795E00DA05FC /* AddReceiveCollectionViewCell.swift in Sources */,
 				BEA12D5720D43D050015A526 /* ButtonFormatter.swift in Sources */,
 				BEA12D5E20D458A10015A526 /* ShoppingListViewController.swift in Sources */,
+				BEC326AC20D9797300DA05FC /* AddReceiveTableViewCell.swift in Sources */,
 				BEA12D6520D7EF000015A526 /* RecipeViewController.swift in Sources */,
 				BEA12D6A20D922560015A526 /* PlannerCollectionViewCell.swift in Sources */,
-				BED9CD4020CEB20000C716CB /* Food.swift in Sources */,
-
+				BED9CD4020CEB20000C716CB /* Ingridient.swift in Sources */,
 				2B4496F820D3FBA300BC556F /* PlanejamentoViewController.swift in Sources */,
 				BED9CD4420CEB42600C716CB /* DaySchedule.swift in Sources */,
 				BEA12D6820D920F80015A526 /* PlannerViewController.swift in Sources */,

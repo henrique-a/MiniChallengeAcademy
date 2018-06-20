@@ -1,5 +1,5 @@
 //
-//  PlannerCollectionViewCell.swift
+//  AddReceiveCollectionViewCell.swift
 //  MiniChanllenge
 //
 //  Created by Ada 2018 on 19/06/18.
@@ -8,13 +8,20 @@
 
 import UIKit
 
-class PlannerCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var txtWeekDay: UILabel!
-    @IBOutlet weak var txtDay: UILabel!
-    @IBOutlet weak var txtMonth: UILabel!
+class AddReceiveCollectionViewCell: UICollectionViewCell {
+    
+    @IBOutlet weak var imgReceipe: UIImageView!
+    @IBOutlet weak var txtReceipeName: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        //Label Config
+        txtReceipeName = LabelFormatter.estiloDeTextoCard(parameter: txtReceipeName, text: "Vitamina de Banana", x: 0, y: 0)
+        //txtReceipeName.backgroundColor = #colorLiteral(red: 0.4390000105, green: 0.4390000105, blue: 0.4390000105, alpha: 1)
+        txtReceipeName.layer.shadowOpacity = 5.0
+        //Image Config
+        imgReceipe.layer.cornerRadius = 12
         
         //Cell Config
         self.backgroundColor = #colorLiteral(red: 0.949000001, green: 0.9449999928, blue: 0.9449999928, alpha: 1)
@@ -25,12 +32,9 @@ class PlannerCollectionViewCell: UICollectionViewCell {
         self.layer.shadowOffset = CGSize.init(width: 3.0, height: 5.0)
         self.clipsToBounds = false
         self.layer.masksToBounds = false
-        
-        //Label's Config
-        txtWeekDay = LabelFormatter.estiloDeTextoSemanaMes(parameter: txtWeekDay, text: "", x: 0, y: 0)
-        txtDay = LabelFormatter.estiloDeTextoDia(parameter: txtDay, text: "", x: 0, y: 0)
-        txtMonth = LabelFormatter.estiloDeTextoSemanaMes(parameter: txtMonth, text: "", x: 0, y: 0)
-        
+//
+//        //Image Config
+//        imgReceipe.contentMode = .scaleAspectFill
     }
-   
+
 }
