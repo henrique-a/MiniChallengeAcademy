@@ -77,4 +77,15 @@ class LabelFormatter {
         
         return parameter
     }
+    
+    static func estiloDeDiasDePlanejamento (parameter: UILabel, text: String) -> UILabel {
+        
+        parameter.font = UIFont (name: "Raleway-Light", size: 13)
+        parameter.text = text
+        parameter.textAlignment = .left
+        //parameter.frame = CGRect (x: x, y: y, width: 153, height: 26)
+        parameter.textColor = #colorLiteral(red: 0.4390000105, green: 0.4390000105, blue: 0.4390000105, alpha: 1)
+        
+        return parameter
+    }
 }

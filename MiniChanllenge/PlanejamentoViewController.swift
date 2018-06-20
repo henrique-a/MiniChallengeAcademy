@@ -10,35 +10,46 @@ import UIKit
 
 class PlanejamentoViewController: UIViewController {
     
+    var mealDays: [MealPlanning] = [
+        MealPlanning("Café da manhã"),
+        MealPlanning("Lanche da Manhã"),
+        MealPlanning("Almoço"),
+        MealPlanning("Lanche da tarde"),
+        MealPlanning("Janta"),
+         MealPlanning("Ceia")
+    ]
+    
     @IBOutlet weak var tituloLabel: UILabel!
     @IBOutlet weak var intervaloLabel: UILabel!
+    
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        tituloLabel.font = UIFont.estiloDeCabecalhoDaPagina
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        
         tituloLabel.textColor = UIColor(named: "mossyGreen")
         
-//        intervaloLabel.font = UIFont.estiloDePeriodoDeDias
         intervaloLabel.textColor = UIColor(named: "warmGrey")
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
-    */
 
 }
+
+extension PlanejamentoViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PlanejamentoTableCell", for: indexPath) as! PlanejamentoTableViewCell
+        cell.titleLabel.text = mealDays[indexPath.row].name
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return mealDays.count
+    }
+    
+}
+
+
