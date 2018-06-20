@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B4496F320D3F96B00BC556F /* Paulo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B4496F220D3F96B00BC556F /* Paulo.storyboard */; };
 		2B4496F820D3FBA300BC556F /* PlanejamentoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4496F720D3FBA300BC556F /* PlanejamentoViewController.swift */; };
 		2B44970820D405E200BC556F /* Maven_Pro in Resources */ = {isa = PBXBuildFile; fileRef = 2B44970620D405E200BC556F /* Maven_Pro */; };
 		2B44970920D405E200BC556F /* Raleway in Resources */ = {isa = PBXBuildFile; fileRef = 2B44970720D405E200BC556F /* Raleway */; };
@@ -17,7 +16,8 @@
 		2B71748F20D40834004EC19A /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B71748B20D40834004EC19A /* Raleway-Regular.ttf */; };
 		2B71749020D40834004EC19A /* Raleway-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B71748C20D40834004EC19A /* Raleway-Light.ttf */; };
 		2B71749120D40834004EC19A /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B71748D20D40834004EC19A /* Raleway-Medium.ttf */; };
-		BEA12D4720D3F9080015A526 /* Cibele.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEA12D4620D3F9080015A526 /* Cibele.storyboard */; };
+		BE422E0C20DAC293003449A8 /* ReceitaTeste.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE422E0B20DAC293003449A8 /* ReceitaTeste.swift */; };
+		BE436C4A20DAA3C20086EDA7 /* Paulo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC02D9B20DA9F4400AB1191 /* Paulo.storyboard */; };
 		BEA12D5320D42C690015A526 /* AddCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA12D5220D42C690015A526 /* AddCalendarViewController.swift */; };
 		BEA12D5520D42DBB0015A526 /* LabelFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA12D5420D42DBB0015A526 /* LabelFormatter.swift */; };
 		BEA12D5720D43D050015A526 /* ButtonFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA12D5620D43D050015A526 /* ButtonFormatter.swift */; };
@@ -27,11 +27,13 @@
 		BEA12D6520D7EF000015A526 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA12D6420D7EF000015A526 /* RecipeViewController.swift */; };
 		BEA12D6820D920F80015A526 /* PlannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA12D6720D920F80015A526 /* PlannerViewController.swift */; };
 		BEA12D6A20D922560015A526 /* PlannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA12D6920D922560015A526 /* PlannerCollectionViewCell.swift */; };
+		BEC02D9D20DA9FA300AB1191 /* Cibele.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEA12D4620D3F9080015A526 /* Cibele.storyboard */; };
 		BEC326A520D93F2800DA05FC /* PlannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC326A420D93F2800DA05FC /* PlannerTableViewCell.swift */; };
 		BEC326A820D9791700DA05FC /* AddReceiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC326A720D9791700DA05FC /* AddReceiveViewController.swift */; };
 		BEC326AA20D9795E00DA05FC /* AddReceiveCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC326A920D9795E00DA05FC /* AddReceiveCollectionViewCell.swift */; };
 		BEC326AC20D9797300DA05FC /* AddReceiveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC326AB20D9797300DA05FC /* AddReceiveTableViewCell.swift */; };
 		BEC326AE20D9AD1700DA05FC /* AddReceive2CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC326AD20D9AD1700DA05FC /* AddReceive2CollectionViewCell.swift */; };
+		BEC326B220DA96AE00DA05FC /* RecipeViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC326B120DA96AE00DA05FC /* RecipeViewControllerDelegate.swift */; };
 		BED9CD0B20CEADD400C716CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD0A20CEADD400C716CB /* AppDelegate.swift */; };
 		BED9CD0D20CEADD400C716CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD0C20CEADD400C716CB /* ViewController.swift */; };
 		BED9CD1020CEADD400C716CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED9CD0E20CEADD400C716CB /* Main.storyboard */; };
@@ -65,7 +67,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2B4496F220D3F96B00BC556F /* Paulo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Paulo.storyboard; sourceTree = "<group>"; };
 		2B4496F720D3FBA300BC556F /* PlanejamentoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanejamentoViewController.swift; sourceTree = "<group>"; };
 		2B44970620D405E200BC556F /* Maven_Pro */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Maven_Pro; sourceTree = "<group>"; };
 		2B44970720D405E200BC556F /* Raleway */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Raleway; sourceTree = "<group>"; };
@@ -75,6 +76,7 @@
 		2B71748B20D40834004EC19A /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Regular.ttf"; path = "fonts/Raleway/Raleway-Regular.ttf"; sourceTree = "<group>"; };
 		2B71748C20D40834004EC19A /* Raleway-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Light.ttf"; path = "fonts/Raleway/Raleway-Light.ttf"; sourceTree = "<group>"; };
 		2B71748D20D40834004EC19A /* Raleway-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Medium.ttf"; path = "fonts/Raleway/Raleway-Medium.ttf"; sourceTree = "<group>"; };
+		BE422E0B20DAC293003449A8 /* ReceitaTeste.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceitaTeste.swift; sourceTree = "<group>"; };
 		BEA12D4620D3F9080015A526 /* Cibele.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cibele.storyboard; sourceTree = "<group>"; };
 		BEA12D5220D42C690015A526 /* AddCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCalendarViewController.swift; sourceTree = "<group>"; };
 		BEA12D5420D42DBB0015A526 /* LabelFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFormatter.swift; sourceTree = "<group>"; };
@@ -85,11 +87,13 @@
 		BEA12D6420D7EF000015A526 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		BEA12D6720D920F80015A526 /* PlannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerViewController.swift; sourceTree = "<group>"; };
 		BEA12D6920D922560015A526 /* PlannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerCollectionViewCell.swift; sourceTree = "<group>"; };
+		BEC02D9B20DA9F4400AB1191 /* Paulo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Paulo.storyboard; sourceTree = "<group>"; };
 		BEC326A420D93F2800DA05FC /* PlannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerTableViewCell.swift; sourceTree = "<group>"; };
 		BEC326A720D9791700DA05FC /* AddReceiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReceiveViewController.swift; sourceTree = "<group>"; };
 		BEC326A920D9795E00DA05FC /* AddReceiveCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReceiveCollectionViewCell.swift; sourceTree = "<group>"; };
 		BEC326AB20D9797300DA05FC /* AddReceiveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReceiveTableViewCell.swift; sourceTree = "<group>"; };
 		BEC326AD20D9AD1700DA05FC /* AddReceive2CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReceive2CollectionViewCell.swift; sourceTree = "<group>"; };
+		BEC326B120DA96AE00DA05FC /* RecipeViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewControllerDelegate.swift; sourceTree = "<group>"; };
 		BED9CD0720CEADD400C716CB /* MiniChanllenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniChanllenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BED9CD0A20CEADD400C716CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BED9CD0C20CEADD400C716CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -139,7 +143,7 @@
 		2B4496F620D3FB7500BC556F /* FrontEnd */ = {
 			isa = PBXGroup;
 			children = (
-				2B4496F220D3F96B00BC556F /* Paulo.storyboard */,
+				BEC02D9B20DA9F4400AB1191 /* Paulo.storyboard */,
 				2B4496F720D3FBA300BC556F /* PlanejamentoViewController.swift */,
 			);
 			name = FrontEnd;
@@ -170,6 +174,7 @@
 		BEA12D5120D40C290015A526 /* FrontEnd2 */ = {
 			isa = PBXGroup;
 			children = (
+				BEC326AF20DA964000DA05FC /* Protocols */,
 				BEC326A620D978EC00DA05FC /* Adicionar Receita */,
 				BEA12D6620D920BC0015A526 /* Agenda */,
 				BEA12D6320D7EEC30015A526 /* Receita */,
@@ -177,6 +182,7 @@
 				BEA12D5920D4446B0015A526 /* Adicionar na Agenda */,
 				BEA12D5820D441AB0015A526 /* Components Formatter */,
 				BEA12D4620D3F9080015A526 /* Cibele.storyboard */,
+				BE422E0B20DAC293003449A8 /* ReceitaTeste.swift */,
 			);
 			name = FrontEnd2;
 			sourceTree = "<group>";
@@ -235,6 +241,14 @@
 				BEC326AD20D9AD1700DA05FC /* AddReceive2CollectionViewCell.swift */,
 			);
 			name = "Adicionar Receita";
+			sourceTree = "<group>";
+		};
+		BEC326AF20DA964000DA05FC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				BEC326B120DA96AE00DA05FC /* RecipeViewControllerDelegate.swift */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 		BED9CCFE20CEADD400C716CB = {
@@ -405,9 +419,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEA12D4720D3F9080015A526 /* Cibele.storyboard in Resources */,
+				BE436C4A20DAA3C20086EDA7 /* Paulo.storyboard in Resources */,
+				BEC02D9D20DA9FA300AB1191 /* Cibele.storyboard in Resources */,
 				2B71749120D40834004EC19A /* Raleway-Medium.ttf in Resources */,
-				2B4496F320D3F96B00BC556F /* Paulo.storyboard in Resources */,
 				BED9CD1820CEADD500C716CB /* LaunchScreen.storyboard in Resources */,
 				2B71749020D40834004EC19A /* Raleway-Light.ttf in Resources */,
 				2B71748E20D40834004EC19A /* Raleway-Bold.ttf in Resources */,
@@ -451,6 +465,7 @@
 				BED9CD4220CEB29500C716CB /* Recipe.swift in Sources */,
 				BEA12D5B20D444F60015A526 /* AddCalendarTableViewCell.swift in Sources */,
 				BED9CD1320CEADD500C716CB /* MiniChanllenge.xcdatamodeld in Sources */,
+				BE422E0C20DAC293003449A8 /* ReceitaTeste.swift in Sources */,
 				BED9CD0D20CEADD400C716CB /* ViewController.swift in Sources */,
 				BED9CD0B20CEADD400C716CB /* AppDelegate.swift in Sources */,
 				BEC326A520D93F2800DA05FC /* PlannerTableViewCell.swift in Sources */,
@@ -461,6 +476,7 @@
 				BEC326AC20D9797300DA05FC /* AddReceiveTableViewCell.swift in Sources */,
 				BEA12D6520D7EF000015A526 /* RecipeViewController.swift in Sources */,
 				BEA12D6A20D922560015A526 /* PlannerCollectionViewCell.swift in Sources */,
+				BEC326B220DA96AE00DA05FC /* RecipeViewControllerDelegate.swift in Sources */,
 				BED9CD4020CEB20000C716CB /* Ingridient.swift in Sources */,
 				2B4496F820D3FBA300BC556F /* PlanejamentoViewController.swift in Sources */,
 				BED9CD4420CEB42600C716CB /* DaySchedule.swift in Sources */,
@@ -630,12 +646,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V9L5FA66L3;
+				DEVELOPMENT_TEAM = GM73VGBYQV;
 				INFOPLIST_FILE = MiniChanllenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.MiniChanllenge;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.MiniChanllengeV2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -645,12 +663,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V9L5FA66L3;
+				DEVELOPMENT_TEAM = GM73VGBYQV;
 				INFOPLIST_FILE = MiniChanllenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.MiniChanllenge;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.MiniChanllengeV2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

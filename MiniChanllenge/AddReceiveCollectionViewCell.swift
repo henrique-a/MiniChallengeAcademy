@@ -17,9 +17,9 @@ class AddReceiveCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         
         //Label Config
-        txtReceipeName = LabelFormatter.estiloDeTextoCard(parameter: txtReceipeName, text: "Vitamina de Banana", x: 0, y: 0)
-        //txtReceipeName.backgroundColor = #colorLiteral(red: 0.4390000105, green: 0.4390000105, blue: 0.4390000105, alpha: 1)
+        txtReceipeName = LabelFormatter.estiloDeTextoCard(parameter: txtReceipeName, text: "Vitamina de Banana")
         txtReceipeName.layer.shadowOpacity = 5.0
+        
         //Image Config
         imgReceipe.layer.cornerRadius = 12
         
@@ -32,9 +32,6 @@ class AddReceiveCollectionViewCell: UICollectionViewCell {
         self.layer.shadowOffset = CGSize.init(width: 3.0, height: 5.0)
         self.clipsToBounds = false
         self.layer.masksToBounds = false
-//
-//        //Image Config
-//        imgReceipe.contentMode = .scaleAspectFill
     }
 
 }

@@ -27,9 +27,9 @@ class PlannerCollectionViewCell: UICollectionViewCell {
         self.layer.masksToBounds = false
         
         //Label's Config
-        txtWeekDay = LabelFormatter.estiloDeTextoSemanaMes(parameter: txtWeekDay, text: "", x: 0, y: 0)
-        txtDay = LabelFormatter.estiloDeTextoDia(parameter: txtDay, text: "", x: 0, y: 0)
-        txtMonth = LabelFormatter.estiloDeTextoSemanaMes(parameter: txtMonth, text: "", x: 0, y: 0)
+        txtWeekDay = LabelFormatter.estiloDeTextoSemanaMes(parameter: txtWeekDay, text: "")
+        txtDay = LabelFormatter.estiloDeTextoDia(parameter: txtDay, text: "")
+        txtMonth = LabelFormatter.estiloDeTextoSemanaMes(parameter: txtMonth, text: "")
         
     }
    
