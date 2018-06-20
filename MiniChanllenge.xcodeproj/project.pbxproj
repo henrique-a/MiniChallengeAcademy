@@ -17,6 +17,12 @@
 		2B71748F20D40834004EC19A /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B71748B20D40834004EC19A /* Raleway-Regular.ttf */; };
 		2B71749020D40834004EC19A /* Raleway-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B71748C20D40834004EC19A /* Raleway-Light.ttf */; };
 		2B71749120D40834004EC19A /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B71748D20D40834004EC19A /* Raleway-Medium.ttf */; };
+		BE7CB4C020D94C3B00108640 /* MiniChanllenge.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = BE7CB4BF20D94C3B00108640 /* MiniChanllenge.xcdatamodel */; };
+		BE7CB4C520D94C4B00108640 /* DaySchedule+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7CB4C120D94C4B00108640 /* DaySchedule+CoreDataClass.swift */; };
+		BE7CB4C620D94C4B00108640 /* DaySchedule+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7CB4C220D94C4B00108640 /* DaySchedule+CoreDataProperties.swift */; };
+		BE7CB4C720D94C4B00108640 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7CB4C320D94C4B00108640 /* User+CoreDataClass.swift */; };
+		BE7CB4C820D94C4B00108640 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7CB4C420D94C4B00108640 /* User+CoreDataProperties.swift */; };
+		BE7CB4CA20D94E1700108640 /* CoreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7CB4C920D94E1700108640 /* CoreDataHandler.swift */; };
 		BEA12D4720D3F9080015A526 /* Cibele.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEA12D4620D3F9080015A526 /* Cibele.storyboard */; };
 		BEA12D5320D42C690015A526 /* AddCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA12D5220D42C690015A526 /* AddCalendarViewController.swift */; };
 		BEA12D5520D42DBB0015A526 /* LabelFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA12D5420D42DBB0015A526 /* LabelFormatter.swift */; };
@@ -30,16 +36,13 @@
 		BED9CD0B20CEADD400C716CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD0A20CEADD400C716CB /* AppDelegate.swift */; };
 		BED9CD0D20CEADD400C716CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD0C20CEADD400C716CB /* ViewController.swift */; };
 		BED9CD1020CEADD400C716CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED9CD0E20CEADD400C716CB /* Main.storyboard */; };
-		BED9CD1320CEADD500C716CB /* MiniChanllenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD1120CEADD500C716CB /* MiniChanllenge.xcdatamodeld */; };
 		BED9CD1520CEADD500C716CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BED9CD1420CEADD500C716CB /* Assets.xcassets */; };
 		BED9CD1820CEADD500C716CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED9CD1620CEADD500C716CB /* LaunchScreen.storyboard */; };
 		BED9CD2320CEADD500C716CB /* MiniChanllengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD2220CEADD500C716CB /* MiniChanllengeTests.swift */; };
 		BED9CD2E20CEADD500C716CB /* MiniChanllengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD2D20CEADD500C716CB /* MiniChanllengeUITests.swift */; };
-		BED9CD3C20CEAE3100C716CB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD3B20CEAE3000C716CB /* User.swift */; };
 		BED9CD3E20CEB00B00C716CB /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD3D20CEB00B00C716CB /* Meal.swift */; };
 		BED9CD4020CEB20000C716CB /* Ingridient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD3F20CEB20000C716CB /* Ingridient.swift */; };
 		BED9CD4220CEB29500C716CB /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD4120CEB29500C716CB /* Recipe.swift */; };
-		BED9CD4420CEB42600C716CB /* DaySchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD4320CEB42600C716CB /* DaySchedule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +73,12 @@
 		2B71748B20D40834004EC19A /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Regular.ttf"; path = "fonts/Raleway/Raleway-Regular.ttf"; sourceTree = "<group>"; };
 		2B71748C20D40834004EC19A /* Raleway-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Light.ttf"; path = "fonts/Raleway/Raleway-Light.ttf"; sourceTree = "<group>"; };
 		2B71748D20D40834004EC19A /* Raleway-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Medium.ttf"; path = "fonts/Raleway/Raleway-Medium.ttf"; sourceTree = "<group>"; };
+		BE7CB4BF20D94C3B00108640 /* MiniChanllenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MiniChanllenge.xcdatamodel; sourceTree = "<group>"; };
+		BE7CB4C120D94C4B00108640 /* DaySchedule+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DaySchedule+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BE7CB4C220D94C4B00108640 /* DaySchedule+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DaySchedule+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BE7CB4C320D94C4B00108640 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BE7CB4C420D94C4B00108640 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BE7CB4C920D94E1700108640 /* CoreDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoreDataHandler.swift; path = MiniChanllenge/CoreDataHandler.swift; sourceTree = SOURCE_ROOT; };
 		BEA12D4620D3F9080015A526 /* Cibele.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cibele.storyboard; sourceTree = "<group>"; };
 		BEA12D5220D42C690015A526 /* AddCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCalendarViewController.swift; sourceTree = "<group>"; };
 		BEA12D5420D42DBB0015A526 /* LabelFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFormatter.swift; sourceTree = "<group>"; };
@@ -84,7 +93,6 @@
 		BED9CD0A20CEADD400C716CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BED9CD0C20CEADD400C716CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BED9CD0F20CEADD400C716CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BED9CD1220CEADD500C716CB /* MiniChanllenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MiniChanllenge.xcdatamodel; sourceTree = "<group>"; };
 		BED9CD1420CEADD500C716CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BED9CD1720CEADD500C716CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BED9CD1920CEADD500C716CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,11 +102,9 @@
 		BED9CD2920CEADD500C716CB /* MiniChanllengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniChanllengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BED9CD2D20CEADD500C716CB /* MiniChanllengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniChanllengeUITests.swift; sourceTree = "<group>"; };
 		BED9CD2F20CEADD500C716CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BED9CD3B20CEAE3000C716CB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BED9CD3D20CEB00B00C716CB /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		BED9CD3F20CEB20000C716CB /* Ingridient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingridient.swift; sourceTree = "<group>"; };
 		BED9CD4120CEB29500C716CB /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
-		BED9CD4320CEB42600C716CB /* DaySchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySchedule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +161,18 @@
 				2B44970720D405E200BC556F /* Raleway */,
 			);
 			path = fonts;
+			sourceTree = "<group>";
+		};
+		BE7CB4BC20D9443900108640 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				BE7CB4C120D94C4B00108640 /* DaySchedule+CoreDataClass.swift */,
+				BE7CB4C220D94C4B00108640 /* DaySchedule+CoreDataProperties.swift */,
+				BE7CB4C320D94C4B00108640 /* User+CoreDataClass.swift */,
+				BE7CB4C420D94C4B00108640 /* User+CoreDataProperties.swift */,
+				BE7CB4C920D94E1700108640 /* CoreDataHandler.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		BEA12D5120D40C290015A526 /* FrontEnd2 */ = {
@@ -237,14 +255,13 @@
 		BED9CD0920CEADD400C716CB /* MiniChanllenge */ = {
 			isa = PBXGroup;
 			children = (
+				BE7CB4BC20D9443900108640 /* CoreData */,
 				2B71748020D406F3004EC19A /* Fonts */,
 				BED9CD0A20CEADD400C716CB /* AppDelegate.swift */,
 				2B4496F620D3FB7500BC556F /* FrontEnd */,
 				BED9CD0C20CEADD400C716CB /* ViewController.swift */,
 				BED9CD0E20CEADD400C716CB /* Main.storyboard */,
-				BED9CD3B20CEAE3000C716CB /* User.swift */,
 				BEA12D5120D40C290015A526 /* FrontEnd2 */,
-				BED9CD4320CEB42600C716CB /* DaySchedule.swift */,
 				BED9CD3F20CEB20000C716CB /* Ingridient.swift */,
 				BED9CD3D20CEB00B00C716CB /* Meal.swift */,
 				BED9CD4120CEB29500C716CB /* Recipe.swift */,
@@ -252,7 +269,7 @@
 				BED9CD1420CEADD500C716CB /* Assets.xcassets */,
 				BED9CD1620CEADD500C716CB /* LaunchScreen.storyboard */,
 				BED9CD1920CEADD500C716CB /* Info.plist */,
-				BED9CD1120CEADD500C716CB /* MiniChanllenge.xcdatamodeld */,
+				BE7CB4BF20D94C3B00108640 /* MiniChanllenge.xcdatamodel */,
 			);
 			path = MiniChanllenge;
 			sourceTree = "<group>";
@@ -421,22 +438,25 @@
 			files = (
 				BEA12D6020D45D390015A526 /* ShoppingListTableViewCell.swift in Sources */,
 				BED9CD3E20CEB00B00C716CB /* Meal.swift in Sources */,
+				BE7CB4C520D94C4B00108640 /* DaySchedule+CoreDataClass.swift in Sources */,
+				BE7CB4C720D94C4B00108640 /* User+CoreDataClass.swift in Sources */,
 				BEA12D5520D42DBB0015A526 /* LabelFormatter.swift in Sources */,
-				BED9CD3C20CEAE3100C716CB /* User.swift in Sources */,
 				BEA12D5320D42C690015A526 /* AddCalendarViewController.swift in Sources */,
 				BED9CD4220CEB29500C716CB /* Recipe.swift in Sources */,
+				BE7CB4CA20D94E1700108640 /* CoreDataHandler.swift in Sources */,
 				BEA12D5B20D444F60015A526 /* AddCalendarTableViewCell.swift in Sources */,
-				BED9CD1320CEADD500C716CB /* MiniChanllenge.xcdatamodeld in Sources */,
 				BED9CD0D20CEADD400C716CB /* ViewController.swift in Sources */,
 				BED9CD0B20CEADD400C716CB /* AppDelegate.swift in Sources */,
 				BEA12D5720D43D050015A526 /* ButtonFormatter.swift in Sources */,
 				BEA12D5E20D458A10015A526 /* ShoppingListViewController.swift in Sources */,
 				BED9CD4020CEB20000C716CB /* Ingridient.swift in Sources */,
 				BEA12D6520D7EF000015A526 /* RecipeViewController.swift in Sources */,
+				BE7CB4C020D94C3B00108640 /* MiniChanllenge.xcdatamodel in Sources */,
 				BEA12D6A20D922560015A526 /* PlannerCollectionViewCell.swift in Sources */,
 				2B4496F820D3FBA300BC556F /* PlanejamentoViewController.swift in Sources */,
-				BED9CD4420CEB42600C716CB /* DaySchedule.swift in Sources */,
 				BEA12D6820D920F80015A526 /* PlannerViewController.swift in Sources */,
+				BE7CB4C820D94C4B00108640 /* User+CoreDataProperties.swift in Sources */,
+				BE7CB4C620D94C4B00108640 /* DaySchedule+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -730,19 +750,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		BED9CD1120CEADD500C716CB /* MiniChanllenge.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				BED9CD1220CEADD500C716CB /* MiniChanllenge.xcdatamodel */,
-			);
-			currentVersion = BED9CD1220CEADD500C716CB /* MiniChanllenge.xcdatamodel */;
-			path = MiniChanllenge.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = BED9CCFF20CEADD400C716CB /* Project object */;
 }
