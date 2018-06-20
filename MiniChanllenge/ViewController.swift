@@ -58,7 +58,6 @@ class ViewController: UIViewController {
     }
     
     func saveData(recipes: [Recipe]) {
-        /*
         let imageView = UIImageView(frame: CGRect(x:0, y:0, width:200, height:200))
         imageView.contentMode = UIViewContentMode.scaleAspectFit
         self.view.addSubview(imageView)
@@ -75,7 +74,7 @@ class ViewController: UIViewController {
         if CoreDataHandler.saveDaySchedule(date: Date(), recipe: "teste", user: (CoreDataHandler.fetchUser()?[8])!) {
             user = CoreDataHandler.fetchUser()?[8]
             print(user?.schedule?.recipe)
-        } */
+        }
     }
     
     

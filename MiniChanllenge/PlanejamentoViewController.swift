@@ -12,23 +12,9 @@ class PlanejamentoViewController: UIViewController {
     
     @IBOutlet weak var tituloLabel: UILabel!
     @IBOutlet weak var intervaloLabel: UILabel!
-    @IBOutlet weak var tableView: UITableView!
-    
-    var mealsPlanning = [MealPlanningOnWeek]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        mealsPlanning = [
-                        MealPlanningOnWeek(name: "Café da manhã"),
-                        MealPlanningOnWeek(name: "Lanche da manhã"),
-                        MealPlanningOnWeek(name: "Almoço"),
-                        MealPlanningOnWeek(name: "Lanche da tarde"),
-                        MealPlanningOnWeek(name: "Janta"),
-                        MealPlanningOnWeek(name: "Ceia")]
-        
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
         
 //        tituloLabel.font = UIFont.estiloDeCabecalhoDaPagina
         tituloLabel.textColor = UIColor(named: "mossyGreen")
@@ -44,31 +30,15 @@ class PlanejamentoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-}
 
-extension PlanejamentoViewController: UITableViewDelegate, UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = Bundle.main.loadNibNamed("PlanejamentoTableViewCell", owner: self, options: nil)?.first as! PlanejamentoTableViewCell
-        cell.titleLabel.text = mealsPlanning[indexPath.row].name
-        
-        for (index, day) in cell.daysLabelArr.enumerated() {
-            
-            if (mealsPlanning[indexPath.row].days[(day.text)!])! {
-                day.textColor = UIColor(named: "mossyGreen")
-            }
-            
-        }
-        
-        return cell
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
     }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return mealsPlanning.count
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 82.0
-    }
-    
+    */
+
 }
