@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct Ingridient: Decodable {
+public struct Ingridient: Decodable {
     var name: String
     var quantity: Float
     var unity: String
@@ -21,7 +21,7 @@ struct Ingridient: Decodable {
         case price
     }
     
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         self.name = try values.decode(String.self, forKey: .name)
         self.quantity = try values.decode(Float.self, forKey: .quantity)

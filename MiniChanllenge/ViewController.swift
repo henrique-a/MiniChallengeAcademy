@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
     
     var recipes:[Recipe] = []
-
+    var user: NSManagedObject?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,6 +23,7 @@ class ViewController: UIViewController {
                 self.recipes = responseArray
             }
         }
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -59,6 +62,19 @@ class ViewController: UIViewController {
         imageView.contentMode = UIViewContentMode.scaleAspectFit
         self.view.addSubview(imageView)
         imageView.image = recipes[0].image
+        
+        var user: User? = nil
+        
+        if CoreDataHandler.saveUser(name: "Henrique", buyingFrequency: "1", shoppingList: ["Cebola", "Banana", "Manteiga"]) {
+            user = CoreDataHandler.fetchUser()?[8]
+            print(user?.name)
+            print(user?.shoppingList![1])
+        }
+        
+        if CoreDataHandler.saveDaySchedule(date: Date(), recipe: "teste", user: (CoreDataHandler.fetchUser()?[8])!) {
+            user = CoreDataHandler.fetchUser()?[8]
+            print(user?.schedule?.recipe)
+        }
     }
     
     
