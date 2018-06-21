@@ -16,6 +16,11 @@ class PlannerTableViewCell: UITableViewCell {
     @IBOutlet weak var btnAddMeal: UIButton!
     @IBOutlet weak var box: UILabel!
     
+    var flag: Bool = false
+    var delegate: PlannerTableViewDelegate?
+    
+    var tableLine: Int = -1
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -48,7 +53,12 @@ class PlannerTableViewCell: UITableViewCell {
 //        parameter.frame.size = CGSize (width: 90, height: 23)
         
     }
-
+    
+    @IBAction func btnCallAddRecipe(_ sender: UIButton) {
+        print("Clicou")
+        delegate?.btnTouched(row: tableLine)
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

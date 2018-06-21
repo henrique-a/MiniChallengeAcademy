@@ -8,8 +8,8 @@
 
 import UIKit
 
-class PlannerViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-
+class PlannerViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, PlannerTableViewDelegate {
+    
     @IBOutlet weak var txtPlanner: UILabel!
     @IBOutlet weak var btnList: UIButton!
     
@@ -75,6 +75,36 @@ class PlannerViewController: UIViewController, UICollectionViewDelegate, UIColle
         // Pass the selected object to the new view controller.
     }
     */
+    @IBAction func btnCallList(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "List", sender: nil)
+    }
+
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "List" {
+            //let controller = segue.destination as! ShoppingListViewController
+            //controller.delegate = self
+        }
+        
+        else if segue.identifier == "AddRecipe" {
+            let controller = segue.destination as! AddReceiveViewController
+//            controller.delegate = self as? RecipeViewControllerDelegate
+//            controller.recipe2 = sender as? ReceitaTeste
+        }
+        
+        else if segue.identifier == "Recipe" {
+            let controller = segue.destination as! RecipeViewController
+            controller.delegate = self as? RecipeViewControllerDelegate
+            controller.recipe = sender as? ReceitaTeste
+        }
+    }
+    
+    func btnTouched(row: Int) {
+        print(refeicoes[row])
+        performSegue(withIdentifier: "AddRecipe", sender: row)
+        
+    }
+}
 
 }
 
@@ -90,6 +120,8 @@ extension PlannerViewController: UITableViewDataSource, UITableViewDelegate{
         cell.txtTime.text = "07:00"
         cell.txtMealDetails.text = "Vitamina de Banana"
         cell.btnAddMeal.setTitle("Adicionar", for: .normal)
+        cell.tableLine = indexPath.row
+        cell.delegate = self
         cell.btnCheckMeal.setTitle("", for: .normal)
         cell.selectionStyle = .none
 

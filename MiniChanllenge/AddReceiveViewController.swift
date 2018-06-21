@@ -18,6 +18,7 @@ class AddReceiveViewController: UIViewController {
     @IBOutlet weak var txtMeal: UILabel!
     
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -62,6 +63,14 @@ class AddReceiveViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "Recipe" {
+            
+            let controller = segue.destination as! RecipeViewController
+            controller.delegate = self as? RecipeViewControllerDelegate
+            controller.recipe = sender as? ReceitaTeste
+            print("chegou aqui")
+            
+        }
     }
     */
 
@@ -75,6 +84,11 @@ extension AddReceiveViewController: UITableViewDelegate, UITableViewDataSource, 
            return 5
         }
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        performSegue(withIdentifier: "Recipe", sender: nil)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
