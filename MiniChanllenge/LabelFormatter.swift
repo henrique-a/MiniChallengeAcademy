@@ -143,4 +143,14 @@ class LabelFormatter {
         return parameter
     }
     
+    static func estiloDeDiasDeCardDePlanejameto (parameter: UILabel, text: String) -> UILabel {
+        
+        parameter.font = UIFont (name: "Raleway-Light", size: 15)
+        parameter.text = text
+        parameter.textAlignment = .left
+        parameter.textColor = #colorLiteral(red: 0.4392156863, green: 0.4390000105, blue: 0.4390000105, alpha: 1)
+        
+        return parameter
+    }
+    
 }
