@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Iu5-bg-rSU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mhg-F9-UkL">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -15,11 +15,127 @@
         <array key="MavenPro-Bold.ttf">
             <string>MavenPro-Bold</string>
         </array>
+        <array key="MavenPro-Regular.ttf">
+            <string>MavenPro-Regular</string>
+        </array>
         <array key="Raleway-Light.ttf">
             <string>Raleway-Light</string>
         </array>
+        <array key="Raleway-Regular.ttf">
+            <string>Raleway-Regular</string>
+        </array>
+        <array key="SFUIText.ttf">
+            <string>.SFUIText</string>
+        </array>
     </customFonts>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="u3H-HS-hxV">
+            <objects>
+                <viewController id="Mhg-F9-UkL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="75x-4h-Eud">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bem vindo(a) ao FoodPlanner" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxf-tL-yXP">
+                                <rect key="frame" x="18" y="59" width="284" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="36"/>
+                                <color key="textColor" name="mossyGreen"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ss4-0l-2Z3">
+                                <rect key="frame" x="17" y="180" width="342" height="162"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">FoodPlanner é um aplicativo de planejamento de refeições desenvoldido pela equipe NOMEDAEQUIPE durante o primeiro MiniChallenge do programa Apple Academy Developer do campus Fortaleza do IFCE.
+</string>
+                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="18"/>
+                                <color key="textColor" name="warmGrey"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTg-5X-JC3">
+                                <rect key="frame" x="275" y="577" width="84" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="22"/>
+                                <state key="normal" title="Próxima">
+                                    <color key="titleColor" red="1" green="0.55773335940000002" blue="0.29085269650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="yT0-sp-exL" kind="show" id="Zgz-aw-wMq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="whiteTwo"/>
+                        <viewLayoutGuide key="safeArea" id="enb-VX-ucC"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xoE-HQ-EHI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4214" y="216"/>
+        </scene>
+        <!--Initial View Controller-->
+        <scene sceneID="wgf-gn-8wQ">
+            <objects>
+                <viewController id="yT0-sp-exL" customClass="InitialViewController" customModule="MiniChanllenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FP8-LE-mCz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bem vindo(a) ao FoodPlanner" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jd9-73-7bS">
+                                <rect key="frame" x="18" y="59" width="284" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="36"/>
+                                <color key="textColor" name="mossyGreen"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A9Y-5C-gdy">
+                                <rect key="frame" x="18" y="184" width="90" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xr8-Y4-0cd">
+                                <rect key="frame" x="275" y="577" width="84" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="22"/>
+                                <state key="normal" title="Próxima">
+                                    <color key="titleColor" red="1" green="0.55773335940000002" blue="0.29085269650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Iu5-bg-rSU" kind="show" id="1Bj-kI-njy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1P-gC-GoZ">
+                                <rect key="frame" x="19" y="284" width="256" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="18"/>
+                                <state key="normal" title="Escolha uma imagem de perfil">
+                                    <color key="titleColor" red="1" green="0.55773335940000002" blue="0.29085269650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Qual seu nome?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLA-bx-bR4">
+                                <rect key="frame" x="19" y="333" width="168" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="22"/>
+                                <color key="textColor" name="mossyGreen"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Seu nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HFr-gS-gmd">
+                                <rect key="frame" x="19" y="372" width="340" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="white"/>
+                                <color key="tintColor" name="white"/>
+                                <color key="textColor" name="dustyOrange"/>
+                                <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" name="whiteTwo"/>
+                        <viewLayoutGuide key="safeArea" id="mss-if-yVI"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p6t-9H-lqr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3388" y="216"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="gGE-ma-j3x">
             <objects>
@@ -28,24 +144,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" name="mossyGreen"/>
                     </tabBar>
                     <connections>
                         <segue destination="2T1-Qd-BbR" kind="relationship" relationship="viewControllers" id="pTv-bN-W0t"/>
                         <segue destination="dX5-tP-0AX" kind="relationship" relationship="viewControllers" id="hMI-mw-Khk"/>
+                        <segue destination="mxA-B2-vnA" kind="relationship" relationship="viewControllers" id="FXM-GF-oFX"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DXG-VR-Bd4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2506" y="217"/>
         </scene>
-        <!--Item-->
+        <!--Planejamento-->
         <scene sceneID="fiZ-mL-BAY">
             <objects>
                 <navigationController id="dX5-tP-0AX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="2nC-5G-OVH"/>
+                    <tabBarItem key="tabBarItem" title="Planejamento" image="planningIcon" selectedImage="planningIcon" id="2nC-5G-OVH"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ixq-wh-py1">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="whiteTwo"/>
                     </navigationBar>
                     <connections>
                         <segue destination="Scl-SV-9RL" kind="relationship" relationship="rootViewController" id="fWH-HT-Dog"/>
@@ -53,7 +172,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eBa-Se-niz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1476" y="992"/>
+            <point key="canvasLocation" x="-1654" y="1009"/>
         </scene>
         <!--Planejamento View Controller-->
         <scene sceneID="T7i-2d-IPR">
@@ -64,18 +183,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Planejamento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IiT-mc-9yp">
-                                <rect key="frame" x="16" y="91" width="343" height="29"/>
-                                <fontDescription key="fontDescription" name="MavenPro-Bold" family="Maven Pro" pointSize="24"/>
+                                <rect key="frame" x="16" y="69" width="343" height="30"/>
+                                <fontDescription key="fontDescription" name=".SFUIText" family=".SF UI Text" pointSize="25"/>
                                 <color key="textColor" name="mossyGreen"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SsT-aT-e7S">
-                                <rect key="frame" x="0.0" y="169" width="375" height="449"/>
+                                <rect key="frame" x="0.0" y="148" width="375" height="470"/>
                                 <color key="backgroundColor" name="white"/>
                                 <color key="sectionIndexBackgroundColor" name="white"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xag-1T-8hr">
-                                <rect key="frame" x="16" y="128" width="343" height="21"/>
+                                <rect key="frame" x="16" y="107" width="343" height="21"/>
                                 <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="18"/>
                                 <color key="textColor" name="warmGrey"/>
                                 <nil key="highlightedColor"/>
@@ -85,7 +204,7 @@
                         <constraints>
                             <constraint firstItem="SsT-aT-e7S" firstAttribute="trailing" secondItem="uLe-HW-DzE" secondAttribute="trailing" id="14B-N3-9nx"/>
                             <constraint firstItem="uLe-HW-DzE" firstAttribute="trailing" secondItem="IiT-mc-9yp" secondAttribute="trailing" constant="16" id="1Ph-Pn-HQe"/>
-                            <constraint firstItem="IiT-mc-9yp" firstAttribute="top" secondItem="uLe-HW-DzE" secondAttribute="top" constant="27" id="3TE-xF-0Nv"/>
+                            <constraint firstItem="IiT-mc-9yp" firstAttribute="top" secondItem="uLe-HW-DzE" secondAttribute="top" constant="5" id="3TE-xF-0Nv"/>
                             <constraint firstItem="SsT-aT-e7S" firstAttribute="leading" secondItem="uLe-HW-DzE" secondAttribute="leading" id="AyO-BC-ojO"/>
                             <constraint firstItem="uLe-HW-DzE" firstAttribute="trailing" secondItem="xag-1T-8hr" secondAttribute="trailing" constant="16" id="CO1-5x-aNv"/>
                             <constraint firstItem="SsT-aT-e7S" firstAttribute="top" secondItem="xag-1T-8hr" secondAttribute="bottom" constant="20" id="Oln-gB-36q"/>
@@ -101,24 +220,98 @@
                         <outlet property="intervaloLabel" destination="xag-1T-8hr" id="SQC-D0-R0c"/>
                         <outlet property="tableView" destination="SsT-aT-e7S" id="dyL-OF-sN4"/>
                         <outlet property="tituloLabel" destination="IiT-mc-9yp" id="VDq-fA-056"/>
+                        <segue destination="UcQ-JX-PmG" kind="show" identifier="AddRecipe2" id="ia6-Mv-SJQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zW3-ry-08a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-527.20000000000005" y="991.75412293853083"/>
+            <point key="canvasLocation" x="-762" y="1009"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Configuração-->
         <scene sceneID="YCv-Gi-lit">
             <objects>
                 <navigationController id="mxA-B2-vnA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Configuração" image="settingIcon" selectedImage="settingIcon" id="k1V-47-Iet"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0Vl-Vi-TWb">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="whiteTwo"/>
                     </navigationBar>
+                    <connections>
+                        <segue destination="wux-tv-XLR" kind="relationship" relationship="rootViewController" id="g3t-wD-eey"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pmB-6e-fgl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1476" y="1825"/>
+            <point key="canvasLocation" x="-3470" y="1009"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="OD3-Mw-xtv">
+            <objects>
+                <viewController id="wux-tv-XLR" customClass="SettingsViewController" customModule="MiniChanllenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Pp-RX-F9C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Configurações" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5j-G1-mxu">
+                                <rect key="frame" x="18" y="78" width="164" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MavenPro-Bold" family="Maven Pro" pointSize="24"/>
+                                <color key="textColor" name="mossyGreen"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jX1-4v-bzX">
+                                <rect key="frame" x="16" y="118" width="90" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome de usuário" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNq-xk-yBE">
+                                <rect key="frame" x="114" y="132" width="245" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="22"/>
+                                <color key="textColor" name="mossyGreen"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C6g-Eh-FHc">
+                                <rect key="frame" x="114" y="161" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="16"/>
+                                <state key="normal" title="Mudar nome">
+                                    <color key="titleColor" red="1" green="0.55773335940000002" blue="0.29085269650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ucu-H6-ODb">
+                                <rect key="frame" x="16" y="216" width="95" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="16"/>
+                                <state key="normal" title="Mudar foto">
+                                    <color key="titleColor" red="1" green="0.55773335940000002" blue="0.29085269650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sobre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7t1-jD-Dw1">
+                                <rect key="frame" x="16" y="266" width="63" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="22"/>
+                                <color key="textColor" name="camoGreen"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btE-xO-7BW">
+                                <rect key="frame" x="16" y="295" width="343" height="154"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">FoodPlanner é um aplicativo de planejamento de refeições desenvoldido pela equipe NOMEDAEQUIPE durante o primeiro MiniChallenge do programa Apple Academy Developer do campus Fortaleza do IFCE.
+</string>
+                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="18"/>
+                                <color key="textColor" name="warmGrey"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="whiteTwo"/>
+                        <viewLayoutGuide key="safeArea" id="fNk-X7-Au7"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sqj-f0-Rxt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SNp-sv-y7A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2654" y="1009"/>
         </scene>
         <!--Add Calendar View Controller-->
         <scene sceneID="jU3-2i-Ixf">
@@ -129,25 +322,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IaZ-wO-kfh">
-                                <rect key="frame" x="16" y="46" width="343" height="20.5"/>
+                                <rect key="frame" x="16" y="90" width="343" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ar3-ba-GI8">
-                                <rect key="frame" x="16" y="81.5" width="343" height="20.5"/>
+                                <rect key="frame" x="16" y="125.5" width="343" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPQ-mJ-KeY">
-                                <rect key="frame" x="16" y="120" width="343" height="21"/>
+                                <rect key="frame" x="16" y="164" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="W8A-HK-fOm">
-                                <rect key="frame" x="0.0" y="157" width="375" height="510"/>
+                                <rect key="frame" x="0.0" y="201" width="375" height="417"/>
                                 <color key="backgroundColor" name="whiteTwo"/>
                                 <color key="sectionIndexBackgroundColor" name="whiteTwo"/>
                                 <color key="sectionIndexTrackingBackgroundColor" red="0.73288302949999995" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -232,16 +425,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yhy-jN-tRr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2001" y="829"/>
+            <point key="canvasLocation" x="2369" y="216"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="O6V-qZ-wg8">
             <objects>
                 <navigationController id="2T1-Qd-BbR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="cYI-Us-six"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="homeIcon" selectedImage="homeIcon" id="cYI-Us-six"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1jF-IQ-eRk">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="mossyGreen"/>
+                        <color key="barTintColor" name="whiteTwo"/>
                     </navigationBar>
                     <connections>
                         <segue destination="QZn-yV-59D" kind="relationship" relationship="rootViewController" id="B91-rw-fB8"/>
@@ -399,7 +594,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="xHZ-df-UAx"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="w2i-9W-aKq"/>
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="homeIcon" id="w2i-9W-aKq"/>
                     <navigationItem key="navigationItem" id="WfP-oo-oct"/>
                     <connections>
                         <outlet property="btnList" destination="y7O-lA-uCd" id="j6g-cg-SJa"/>
@@ -626,7 +821,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ktn-de-fKS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="151" y="80"/>
+            <point key="canvasLocation" x="247" y="314"/>
         </scene>
         <!--Shopping List View Controller-->
         <scene sceneID="IAB-0Q-k9h">
@@ -740,7 +935,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gty-cK-ctM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="161" y="-659"/>
+            <point key="canvasLocation" x="246" y="-863"/>
         </scene>
         <!--Recipe View Controller-->
         <scene sceneID="3ny-gR-85M">
@@ -890,16 +1085,32 @@
                         <outlet property="txtRecipe" destination="nI6-om-TpH" id="e87-1O-MxG"/>
                         <outlet property="txtRecipeName" destination="CLJ-oL-Upl" id="DKD-tk-I6p"/>
                         <outlet property="viewScroll" destination="uZe-39-NKY" id="JnS-h5-0an"/>
+                        <segue destination="IDY-C0-Vh0" kind="show" identifier="AddCalendar" id="pzK-Bp-43h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DhW-Xb-Nxg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1018" y="-260"/>
+            <point key="canvasLocation" x="1106" y="-260"/>
         </scene>
     </scenes>
     <resources>
+        <image name="homeIcon" width="25" height="25"/>
+        <image name="planningIcon" width="25" height="28"/>
+        <image name="settingIcon" width="25" height="25"/>
+        <namedColor name="camoGreen">
+            <color red="0.25499999523162842" green="0.43500000238418579" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="dustyOrange">
+            <color red="0.9179999828338623" green="0.46299999952316284" blue="0.23899999260902405" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="mossyGreen">
             <color red="0.3449999988079071" green="0.58399999141693115" blue="0.19200000166893005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="mossyGreen">
+            <color red="0.34499999879999999" green="0.58399999140000003" blue="0.19200000170000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="warmGrey">
+            <color red="0.43900001049041748" green="0.43900001049041748" blue="0.43900001049041748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="warmGrey">
             <color red="0.43900001049041748" green="0.43900001049041748" blue="0.43900001049041748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -913,5 +1124,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="SnQ-Ig-r9a"/>
+        <segue reference="ia6-Mv-SJQ"/>
     </inferredMetricsTieBreakers>
 </document>

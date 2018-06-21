@@ -19,6 +19,9 @@ class PlanejamentoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        
         mealsPlanning = [
                         MealPlanningOnWeek(name: "Café da manhã"),
                         MealPlanningOnWeek(name: "Lanche da manhã"),

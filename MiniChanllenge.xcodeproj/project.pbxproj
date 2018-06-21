@@ -16,6 +16,8 @@
 		2B71749020D40834004EC19A /* Raleway-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B71748C20D40834004EC19A /* Raleway-Light.ttf */; };
 		2B71749120D40834004EC19A /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B71748D20D40834004EC19A /* Raleway-Medium.ttf */; };
 		BE422E0C20DAC293003449A8 /* ReceitaTeste.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE422E0B20DAC293003449A8 /* ReceitaTeste.swift */; };
+		BE80359620DC331B00059788 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE80359520DC331B00059788 /* InitialViewController.swift */; };
+		BE80359920DC3FA800059788 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE80359820DC3FA800059788 /* SettingsViewController.swift */; };
 		BE85396120DBC42A0097063F /* PlannerTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE85396020DBC42A0097063F /* PlannerTableViewDelegate.swift */; };
 		BE85397420DBEF040097063F /* PlanejamentoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE85397020DBEF040097063F /* PlanejamentoViewController.swift */; };
 		BE85397520DBEF040097063F /* MealPlanningOnWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE85397120DBEF040097063F /* MealPlanningOnWeek.swift */; };
@@ -77,6 +79,8 @@
 		2B71748C20D40834004EC19A /* Raleway-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Light.ttf"; path = "fonts/Raleway/Raleway-Light.ttf"; sourceTree = "<group>"; };
 		2B71748D20D40834004EC19A /* Raleway-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Medium.ttf"; path = "fonts/Raleway/Raleway-Medium.ttf"; sourceTree = "<group>"; };
 		BE422E0B20DAC293003449A8 /* ReceitaTeste.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceitaTeste.swift; sourceTree = "<group>"; };
+		BE80359520DC331B00059788 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		BE80359820DC3FA800059788 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		BE85396020DBC42A0097063F /* PlannerTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerTableViewDelegate.swift; sourceTree = "<group>"; };
 		BE85397020DBEF040097063F /* PlanejamentoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanejamentoViewController.swift; sourceTree = "<group>"; };
 		BE85397120DBEF040097063F /* MealPlanningOnWeek.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealPlanningOnWeek.swift; sourceTree = "<group>"; };
@@ -164,6 +168,22 @@
 			path = fonts;
 			sourceTree = "<group>";
 		};
+		BE80359420DC32EF00059788 /* Initial */ = {
+			isa = PBXGroup;
+			children = (
+				BE80359520DC331B00059788 /* InitialViewController.swift */,
+			);
+			name = Initial;
+			sourceTree = "<group>";
+		};
+		BE80359720DC3F9500059788 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				BE80359820DC3FA800059788 /* SettingsViewController.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
 		BE85396E20DBEE640097063F /* Planejamento */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +198,8 @@
 		BEA12D5120D40C290015A526 /* FrontEnd */ = {
 			isa = PBXGroup;
 			children = (
+				BE80359720DC3F9500059788 /* Settings */,
+				BE80359420DC32EF00059788 /* Initial */,
 				BE85396E20DBEE640097063F /* Planejamento */,
 				BEC326AF20DA964000DA05FC /* Protocols */,
 				BEC326A620D978EC00DA05FC /* Adicionar Receita */,
@@ -462,6 +484,7 @@
 				BEC326A820D9791700DA05FC /* AddReceiveViewController.swift in Sources */,
 				BEA12D6020D45D390015A526 /* ShoppingListTableViewCell.swift in Sources */,
 				BED9CD3E20CEB00B00C716CB /* Meal.swift in Sources */,
+				BE80359620DC331B00059788 /* InitialViewController.swift in Sources */,
 				BEA12D5520D42DBB0015A526 /* LabelFormatter.swift in Sources */,
 				BEA12D5320D42C690015A526 /* AddCalendarViewController.swift in Sources */,
 				BE85396120DBC42A0097063F /* PlannerTableViewDelegate.swift in Sources */,
@@ -481,6 +504,7 @@
 				BEC326AC20D9797300DA05FC /* AddReceiveTableViewCell.swift in Sources */,
 				BEA12D6520D7EF000015A526 /* RecipeViewController.swift in Sources */,
 				BEA12D6A20D922560015A526 /* PlannerCollectionViewCell.swift in Sources */,
+				BE80359920DC3FA800059788 /* SettingsViewController.swift in Sources */,
 				BEC326B220DA96AE00DA05FC /* RecipeViewControllerDelegate.swift in Sources */,
 				BED9CD4020CEB20000C716CB /* Ingridient.swift in Sources */,
 				BEA12D6820D920F80015A526 /* PlannerViewController.swift in Sources */,

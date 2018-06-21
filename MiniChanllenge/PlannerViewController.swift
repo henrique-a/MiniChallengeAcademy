@@ -23,6 +23,9 @@ class PlannerViewController: UIViewController, UICollectionViewDelegate, UIColle
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        
        // Teste
         let receita = ReceitaTeste.init(aNome: "Vitamina de Banana", aIngredientes: "100 ml de leite \n2 bananas", aPreparo: "1. Faça isso \n2. Faça aquilo \n3. Faça aquilo outro \n4. Prontinho", aTempo: "5,00 min", aImagem: #imageLiteral(resourceName: "StrawberryBananaSmoothie.jpg"))
         let receita2 = ReceitaTeste.init(aNome: "Algodão doce", aIngredientes: "1 xic de Açúcar\n1 colher de corante \npalito de cheurrasco", aPreparo: "1. Faça isso \n2. Faça aquilo \n3. Faça aquilo outro \n4. Prontinho", aTempo: "10 min", aImagem: #imageLiteral(resourceName: "3055_1_20170717170346.jpg"))
