@@ -17,8 +17,7 @@ class AddReceiveViewController: UIViewController {
     @IBOutlet weak var txtFavorites: UILabel!
     @IBOutlet weak var txtMeal: UILabel!
     
-    var delegate: RecipeViewControllerDelegate?
-    var recipe2: ReceitaTeste?
+    var recipes: [Recipe] = []
     
     override func viewDidLoad() {
         
@@ -48,12 +47,41 @@ class AddReceiveViewController: UIViewController {
         tvAddReceive.delegate = self
         tvAddReceive.dataSource = self
         
+        //Add in subviews
+        //self.view1.addSubview(cvMeal)
+        getData() { (response) in
+            if let responseArray = response as? [Recipe] {
+                self.recipes = responseArray
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func getData(completionHandler: @escaping ([Recipe]) -> Void) {
+        let jsonURL = "https://henriqueapi.herokuapp.com/recipes/?format=json"
+        
+        guard let url = URL(string: jsonURL) else { return }
+        
+        URLSession.shared.dataTask(with: url) { (data, response, err)  in
+            
+            guard let data = data else { return }
+            do {
+                let recipes: [Recipe] = try JSONDecoder().decode([Recipe].self, from: data)
+                DispatchQueue.main.async {
+                    completionHandler(recipes)
+                    self.tvAddReceive.reloadData()
+                    self.cvMeal.reloadData()
+                }
+            } catch {
+                
+            }
+            }.resume()
+    }
+    
     
 
     
@@ -69,12 +97,14 @@ class AddReceiveViewController: UIViewController {
 
 }
 
-extension AddReceiveViewController: UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource{
+extension AddReceiveViewController: UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.cvMeal{
-            return 5
+            print(self.recipes.count)
+            return self.recipes.count
         } else {
-           return 5
+            print(self.recipes.count)
+            return self.recipes.count
         }
         
     }
@@ -87,16 +117,30 @@ extension AddReceiveViewController: UITableViewDelegate, UITableViewDataSource, 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.cvMeal{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AddRecieveCollectionCell2", for: indexPath) as! AddReceive2CollectionViewCell
-            cell.imgCollection2.image = #imageLiteral(resourceName: "StrawberryBananaSmoothie.jpg")
-            cell.lblCollection2.text = "Vitamina"
-            
+            if !self.recipes.isEmpty {
+                let recipe = self.recipes[indexPath.row]
+                cell.imgCollection2.image = recipe.image
+                cell.lblCollection2.text = recipe.name
+                
+            } else {
+                cell.imgCollection2.image = #imageLiteral(resourceName: "StrawberryBananaSmoothie.jpg")
+                cell.lblCollection2.text = "Vitamina"
+            }
+    
             return cell
         }
-        else{
+        else {
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionInsideCell", for: indexPath) as? AddReceiveCollectionViewCell {
-                cell.imgReceipe.image = #imageLiteral(resourceName: "3055_1_20170717170346.jpg")
-                cell.txtReceipeName.text = "Algodão Doce"
-                
+                if !self.recipes.isEmpty {
+                    let recipe = self.recipes[indexPath.row]
+                    cell.imgReceipe.image = recipe.image
+                    cell.txtReceipeName.text = recipe.name
+                    
+                } else {
+                    cell.imgReceipe.image = #imageLiteral(resourceName: "3055_1_20170717170346.jpg")
+                    cell.txtReceipeName.text = "Algodão Doce"
+                    //cell.layer.cornerRadius = cell.bounds.height / 2.0
+                }
                 return cell
             }
         }
