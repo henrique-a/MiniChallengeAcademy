@@ -16,10 +16,7 @@ class AddReceiveViewController: UIViewController {
     @IBOutlet weak var txtAddReceipe: UILabel!
     @IBOutlet weak var txtFavorites: UILabel!
     @IBOutlet weak var txtMeal: UILabel!
-    
-    var delegate: RecipeViewControllerDelegate?
-    var recipe2: ReceitaTeste?
-    
+
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -59,10 +56,11 @@ class AddReceiveViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Recipe" {
+            
             let controller = segue.destination as! RecipeViewController
             controller.delegate = self as? RecipeViewControllerDelegate
-//            controller.txtRecipeName.text = "Algodão Doce"
-//            controller.imgRecipe.image = #imageLiteral(resourceName: "3055_1_20170717170346.jpg")
+            controller.recipe = sender as? ReceitaTeste
+            print("chegou aqui")
             
         }
     }
@@ -81,7 +79,7 @@ extension AddReceiveViewController: UITableViewDelegate, UITableViewDataSource, 
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
-        performSegue(withIdentifier: "Recipe", sender: cell)
+        performSegue(withIdentifier: "Recipe", sender: nil)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

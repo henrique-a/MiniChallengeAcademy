@@ -16,7 +16,10 @@ class PlannerTableViewCell: UITableViewCell {
     @IBOutlet weak var btnAddMeal: UIButton!
     @IBOutlet weak var box: UILabel!
     
-    var flag = false
+    var flag: Bool = false
+    var delegate: PlannerTableViewDelegate?
+    
+    var tableLine: Int = -1
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -56,14 +59,9 @@ class PlannerTableViewCell: UITableViewCell {
     }
     
     @IBAction func btnCallAddRecipe(_ sender: UIButton) {
-        //Avisar que foi clicado para a controller
-        //controller chama a segue ???????
-        //self.performSegue(withIdentifier: "AddRecipe", sender: nil)
+        print("Clicou")
+        delegate?.btnTouched(row: tableLine)
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//
-//    }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

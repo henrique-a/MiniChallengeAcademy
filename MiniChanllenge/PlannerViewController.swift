@@ -8,8 +8,8 @@
 
 import UIKit
 
-class PlannerViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-
+class PlannerViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, PlannerTableViewDelegate {
+    
     @IBOutlet weak var txtPlanner: UILabel!
     @IBOutlet weak var btnList: UIButton!
     
@@ -88,10 +88,7 @@ class PlannerViewController: UIViewController, UICollectionViewDelegate, UIColle
     @IBAction func btnCallList(_ sender: UIButton) {
         self.performSegue(withIdentifier: "List", sender: nil)
     }
-   
-//    @IBAction func btnCallAddRecipe(_ sender: UIButton) {
-//        self.performSegue(withIdentifier: "AddRecipe", sender: arrayReceitas[])
-//    }
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "List" {
@@ -101,8 +98,8 @@ class PlannerViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         else if segue.identifier == "AddRecipe" {
             let controller = segue.destination as! AddReceiveViewController
-            controller.delegate = self as? RecipeViewControllerDelegate
-            controller.recipe2 = sender as? ReceitaTeste
+//            controller.delegate = self as? RecipeViewControllerDelegate
+//            controller.recipe2 = sender as? ReceitaTeste
         }
         
         else if segue.identifier == "Recipe" {
@@ -110,6 +107,12 @@ class PlannerViewController: UIViewController, UICollectionViewDelegate, UIColle
             controller.delegate = self as? RecipeViewControllerDelegate
             controller.recipe = sender as? ReceitaTeste
         }
+    }
+    
+    func btnTouched(row: Int) {
+        print(refeicoes[row])
+        performSegue(withIdentifier: "AddRecipe", sender: row)
+        
     }
 }
 
@@ -131,6 +134,8 @@ extension PlannerViewController: UITableViewDataSource, UITableViewDelegate{
         cell.txtTime.text = "07:00"
         cell.txtMealDetails.text = arrayReceitas[indexPath.row].nome
         cell.btnAddMeal.setTitle("Adicionar", for: .normal)
+        cell.tableLine = indexPath.row
+        cell.delegate = self
         cell.btnCheckMeal.setTitle("", for: .normal)
         cell.selectionStyle = .none
 
