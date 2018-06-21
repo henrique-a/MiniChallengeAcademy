@@ -16,15 +16,17 @@ class PlannerTableViewCell: UITableViewCell {
     @IBOutlet weak var btnAddMeal: UIButton!
     @IBOutlet weak var box: UILabel!
     
+    var flag = false
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
         self.backgroundColor = #colorLiteral(red: 0.8899999857, green: 0.8899999857, blue: 0.8899999857, alpha: 1)
         
         //Label's Formatter
-        txtMeal = LabelFormatter.estiloDeTituloDeSecao(parameter: txtMeal, text: "", x: 0, y: 0)
-        txtTime = LabelFormatter.estiloDeTextoSimples(parameter: txtTime, text: "", x: 0, y: 0)
-        txtMealDetails = LabelFormatter.estiloDeReceicaoDia(parameter: txtMealDetails, text: "", x: 0, y: 0)
+        txtMeal = LabelFormatter.estiloDeTituloDeSecao(parameter: txtMeal, text: "")
+        txtTime = LabelFormatter.estiloDeTextoSimples(parameter: txtTime, text: "")
+        txtMealDetails = LabelFormatter.estiloDeReceicaoDia(parameter: txtMealDetails, text: "")
         box.layer.backgroundColor = #colorLiteral(red: 0.949000001, green: 0.9449999928, blue: 0.9449999928, alpha: 1)
         box.layer.cornerRadius = 12
         box.layer.shadowColor = #colorLiteral(red: 0.4390000105, green: 0.4390000105, blue: 0.4390000105, alpha: 1)
@@ -38,17 +40,31 @@ class PlannerTableViewCell: UITableViewCell {
         
         btnAddMeal.tintColor = #colorLiteral(red: 0.9179999828, green: 0.4629999995, blue: 0.2389999926, alpha: 1)
         btnAddMeal.titleLabel?.font = UIFont (name: "Raleway-Bold", size: 16)
-        
-        
-//        parameter.backgroundColor = #colorLiteral(red: 0.9179999828, green: 0.4629999995, blue: 0.2389999926, alpha: 1)
-//        parameter.setTitle(text , for: .normal )
-//        parameter.tintColor = #colorLiteral(red: 0.949000001, green: 0.9449999928, blue: 0.9449999928, alpha: 1)
-//        parameter.titleLabel?.font = UIFont (name: "Raleway-Regular", size: 18)
-//        parameter.layer.cornerRadius = 12
-//        parameter.frame.size = CGSize (width: 90, height: 23)
+    }
+    
+    @IBAction func btnCheckAction(_ sender: UIButton) {
+        if flag == false{
+            sender.setBackgroundImage( #imageLiteral(resourceName: "icons8-selecionado-48.png"), for: UIControlState.normal)
+            flag = true
+            
+        }
+        else{
+            sender.setBackgroundImage( UIImage(), for: UIControlState.normal)
+            flag = false
+        }
         
     }
-
+    
+    @IBAction func btnCallAddRecipe(_ sender: UIButton) {
+        //Avisar que foi clicado para a controller
+        //controller chama a segue ???????
+        //self.performSegue(withIdentifier: "AddRecipe", sender: nil)
+    }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//
+//    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

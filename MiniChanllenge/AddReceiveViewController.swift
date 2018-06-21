@@ -17,14 +17,17 @@ class AddReceiveViewController: UIViewController {
     @IBOutlet weak var txtFavorites: UILabel!
     @IBOutlet weak var txtMeal: UILabel!
     
+    var delegate: RecipeViewControllerDelegate?
+    var recipe2: ReceitaTeste?
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         //Label's Config
-        txtAddReceipe = LabelFormatter.estiloDeCabecalhoDaPagina(parameter: txtAddReceipe, text: "Adicionar Receita", x: 0, y: 0)
-        txtFavorites = LabelFormatter.estiloDeTituloDeSecao(parameter: txtFavorites, text: "Favoritos", x: 0, y: 0)
-        txtMeal = LabelFormatter.estiloDeTituloDeSecao(parameter: txtMeal, text: "Café da Manhã", x: 0, y: 0)
+        txtAddReceipe = LabelFormatter.estiloDeCabecalhoDaPagina(parameter: txtAddReceipe, text: "Adicionar Receita")
+        txtFavorites = LabelFormatter.estiloDeTituloDeSecao(parameter: txtFavorites, text: "Favoritos")
+        txtMeal = LabelFormatter.estiloDeTituloDeSecao(parameter: txtMeal, text: "Café da Manhã")
         
         view1.backgroundColor = #colorLiteral(red: 0.8899999857, green: 0.8899999857, blue: 0.8899999857, alpha: 1)
         self.view.backgroundColor = #colorLiteral(red: 0.8899999857, green: 0.8899999857, blue: 0.8899999857, alpha: 1)
@@ -45,8 +48,6 @@ class AddReceiveViewController: UIViewController {
         tvAddReceive.delegate = self
         tvAddReceive.dataSource = self
         
-        //Add in subviews
-        //self.view1.addSubview(cvMeal)
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,15 +56,16 @@ class AddReceiveViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "Recipe" {
+            let controller = segue.destination as! RecipeViewController
+            controller.delegate = self as? RecipeViewControllerDelegate
+//            controller.txtRecipeName.text = "Algodão Doce"
+//            controller.imgRecipe.image = #imageLiteral(resourceName: "3055_1_20170717170346.jpg")
+            
+        }
     }
-    */
 
 }
 
@@ -75,6 +77,11 @@ extension AddReceiveViewController: UITableViewDelegate, UITableViewDataSource, 
            return 5
         }
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        performSegue(withIdentifier: "Recipe", sender: cell)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -89,7 +96,6 @@ extension AddReceiveViewController: UITableViewDelegate, UITableViewDataSource, 
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionInsideCell", for: indexPath) as? AddReceiveCollectionViewCell {
                 cell.imgReceipe.image = #imageLiteral(resourceName: "3055_1_20170717170346.jpg")
                 cell.txtReceipeName.text = "Algodão Doce"
-                //cell.layer.cornerRadius = cell.bounds.height / 2.0
                 
                 return cell
             }
@@ -123,4 +129,6 @@ extension AddReceiveViewController: UITableViewDelegate, UITableViewDataSource, 
         return 100
         
     }
+    
+    
 }
