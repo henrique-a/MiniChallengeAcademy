@@ -104,7 +104,6 @@ class PlannerViewController: UIViewController, UICollectionViewDelegate, UIColle
         performSegue(withIdentifier: "AddRecipe", sender: row)
         
     }
-}
 
 }
 

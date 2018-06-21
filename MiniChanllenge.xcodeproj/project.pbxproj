@@ -15,7 +15,6 @@
 		2B71748F20D40834004EC19A /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B71748B20D40834004EC19A /* Raleway-Regular.ttf */; };
 		2B71749020D40834004EC19A /* Raleway-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B71748C20D40834004EC19A /* Raleway-Light.ttf */; };
 		2B71749120D40834004EC19A /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B71748D20D40834004EC19A /* Raleway-Medium.ttf */; };
-		BE79A76320DBD36000023ECF /* CoreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE79A75E20DBD36000023ECF /* CoreDataHandler.swift */; };
 		BE85396120DBC42A0097063F /* PlannerTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE85396020DBC42A0097063F /* PlannerTableViewDelegate.swift */; };
 		BE85397420DBEF040097063F /* PlanejamentoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE85397020DBEF040097063F /* PlanejamentoViewController.swift */; };
 		BE85398120DC29FB0097063F /* MealPlanningOnWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE85398020DC29FB0097063F /* MealPlanningOnWeek.swift */; };
@@ -30,6 +29,8 @@
 		BEA12D6520D7EF000015A526 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA12D6420D7EF000015A526 /* RecipeViewController.swift */; };
 		BEA12D6820D920F80015A526 /* PlannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA12D6720D920F80015A526 /* PlannerViewController.swift */; };
 		BEA12D6A20D922560015A526 /* PlannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA12D6920D922560015A526 /* PlannerCollectionViewCell.swift */; };
+		BEC294EE20DC51B100389F47 /* CoreData in Resources */ = {isa = PBXBuildFile; fileRef = BEC294ED20DC51B100389F47 /* CoreData */; };
+		BEC294F020DC52A700389F47 /* RecipeViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC294EF20DC52A700389F47 /* RecipeViewControllerDelegate.swift */; };
 		BEC326A520D93F2800DA05FC /* PlannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC326A420D93F2800DA05FC /* PlannerTableViewCell.swift */; };
 		BEC326A820D9791700DA05FC /* AddReceiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC326A720D9791700DA05FC /* AddReceiveViewController.swift */; };
 		BEC326AA20D9795E00DA05FC /* AddReceiveCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC326A920D9795E00DA05FC /* AddReceiveCollectionViewCell.swift */; };
@@ -46,10 +47,6 @@
 		BED9CD3E20CEB00B00C716CB /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD3D20CEB00B00C716CB /* Meal.swift */; };
 		BED9CD4020CEB20000C716CB /* Ingridient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD3F20CEB20000C716CB /* Ingridient.swift */; };
 		BED9CD4220CEB29500C716CB /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD4120CEB29500C716CB /* Recipe.swift */; };
-		BEE327FB20DBEE9300CB3395 /* DaySchedule+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE327F720DBEE9300CB3395 /* DaySchedule+CoreDataClass.swift */; };
-		BEE327FC20DBEE9300CB3395 /* DaySchedule+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE327F820DBEE9300CB3395 /* DaySchedule+CoreDataProperties.swift */; };
-		BEE327FD20DBEE9300CB3395 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE327F920DBEE9300CB3395 /* User+CoreDataClass.swift */; };
-		BEE327FE20DBEE9300CB3395 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE327FA20DBEE9300CB3395 /* User+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,7 +75,6 @@
 		2B71748B20D40834004EC19A /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Regular.ttf"; path = "fonts/Raleway/Raleway-Regular.ttf"; sourceTree = "<group>"; };
 		2B71748C20D40834004EC19A /* Raleway-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Light.ttf"; path = "fonts/Raleway/Raleway-Light.ttf"; sourceTree = "<group>"; };
 		2B71748D20D40834004EC19A /* Raleway-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Medium.ttf"; path = "fonts/Raleway/Raleway-Medium.ttf"; sourceTree = "<group>"; };
-		BE79A75E20DBD36000023ECF /* CoreDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHandler.swift; sourceTree = "<group>"; };
 		BE85396020DBC42A0097063F /* PlannerTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerTableViewDelegate.swift; sourceTree = "<group>"; };
 		BE85397020DBEF040097063F /* PlanejamentoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanejamentoViewController.swift; sourceTree = "<group>"; };
 		BE85398020DC29FB0097063F /* MealPlanningOnWeek.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealPlanningOnWeek.swift; sourceTree = "<group>"; };
@@ -94,6 +90,8 @@
 		BEA12D6420D7EF000015A526 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		BEA12D6720D920F80015A526 /* PlannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerViewController.swift; sourceTree = "<group>"; };
 		BEA12D6920D922560015A526 /* PlannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerCollectionViewCell.swift; sourceTree = "<group>"; };
+		BEC294ED20DC51B100389F47 /* CoreData */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CoreData; sourceTree = "<group>"; };
+		BEC294EF20DC52A700389F47 /* RecipeViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeViewControllerDelegate.swift; sourceTree = "<group>"; };
 		BEC326A420D93F2800DA05FC /* PlannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerTableViewCell.swift; sourceTree = "<group>"; };
 		BEC326A720D9791700DA05FC /* AddReceiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReceiveViewController.swift; sourceTree = "<group>"; };
 		BEC326A920D9795E00DA05FC /* AddReceiveCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReceiveCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -117,10 +115,6 @@
 		BED9CD3F20CEB20000C716CB /* Ingridient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingridient.swift; sourceTree = "<group>"; };
 		BED9CD4120CEB29500C716CB /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		BEE327F620DBED5300CB3395 /* MiniChanllenge v2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "MiniChanllenge v2.xcdatamodel"; sourceTree = "<group>"; };
-		BEE327F720DBEE9300CB3395 /* DaySchedule+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DaySchedule+CoreDataClass.swift"; path = "../../DaySchedule+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BEE327F820DBEE9300CB3395 /* DaySchedule+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DaySchedule+CoreDataProperties.swift"; path = "../../DaySchedule+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		BEE327F920DBEE9300CB3395 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "User+CoreDataClass.swift"; path = "../../User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BEE327FA20DBEE9300CB3395 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "User+CoreDataProperties.swift"; path = "../../User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,11 +178,6 @@
 		BE85397D20DC29560097063F /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				BEE327F820DBEE9300CB3395 /* DaySchedule+CoreDataProperties.swift */,
-				BEE327FA20DBEE9300CB3395 /* User+CoreDataProperties.swift */,
-				BEE327F920DBEE9300CB3395 /* User+CoreDataClass.swift */,
-				BEE327F720DBEE9300CB3395 /* DaySchedule+CoreDataClass.swift */,
-				BE79A75E20DBD36000023ECF /* CoreDataHandler.swift */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -269,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				BE85396020DBC42A0097063F /* PlannerTableViewDelegate.swift */,
+				BEC294EF20DC52A700389F47 /* RecipeViewControllerDelegate.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -297,6 +287,7 @@
 		BED9CD0920CEADD400C716CB /* MiniChanllenge */ = {
 			isa = PBXGroup;
 			children = (
+				BEC294ED20DC51B100389F47 /* CoreData */,
 				2B71748020D406F3004EC19A /* Fonts */,
 				BED9CD0A20CEADD400C716CB /* AppDelegate.swift */,
 				BED9CD0C20CEADD400C716CB /* ViewController.swift */,
@@ -442,6 +433,7 @@
 				2B71749120D40834004EC19A /* Raleway-Medium.ttf in Resources */,
 				BED9CD1820CEADD500C716CB /* LaunchScreen.storyboard in Resources */,
 				2B71749020D40834004EC19A /* Raleway-Light.ttf in Resources */,
+				BEC294EE20DC51B100389F47 /* CoreData in Resources */,
 				2B71748E20D40834004EC19A /* Raleway-Bold.ttf in Resources */,
 				2B71748820D40827004EC19A /* MavenPro-Bold.ttf in Resources */,
 				BED9CD1520CEADD500C716CB /* Assets.xcassets in Resources */,
@@ -476,7 +468,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEC326A820D9791700DA05FC /* AddReceiveViewController.swift in Sources */,
-				BEE327FC20DBEE9300CB3395 /* DaySchedule+CoreDataProperties.swift in Sources */,
 				BEA12D6020D45D390015A526 /* ShoppingListTableViewCell.swift in Sources */,
 				BED9CD3E20CEB00B00C716CB /* Meal.swift in Sources */,
 				BEA12D5520D42DBB0015A526 /* LabelFormatter.swift in Sources */,
@@ -484,15 +475,11 @@
 				BEA12D5320D42C690015A526 /* AddCalendarViewController.swift in Sources */,
 				BE85396120DBC42A0097063F /* PlannerTableViewDelegate.swift in Sources */,
 				BED9CD4220CEB29500C716CB /* Recipe.swift in Sources */,
-				BEE327FE20DBEE9300CB3395 /* User+CoreDataProperties.swift in Sources */,
-				BEE327FD20DBEE9300CB3395 /* User+CoreDataClass.swift in Sources */,
 				BEA12D5B20D444F60015A526 /* AddCalendarTableViewCell.swift in Sources */,
 				BED9CD1320CEADD500C716CB /* MiniChanllenge.xcdatamodeld in Sources */,
-				BEE327FB20DBEE9300CB3395 /* DaySchedule+CoreDataClass.swift in Sources */,
 				BED9CD0D20CEADD400C716CB /* ViewController.swift in Sources */,
 				BED9CD0B20CEADD400C716CB /* AppDelegate.swift in Sources */,
 				BEC326A520D93F2800DA05FC /* PlannerTableViewCell.swift in Sources */,
-				BE79A76320DBD36000023ECF /* CoreDataHandler.swift in Sources */,
 				BE85398120DC29FB0097063F /* MealPlanningOnWeek.swift in Sources */,
 				BEC326AE20D9AD1700DA05FC /* AddReceive2CollectionViewCell.swift in Sources */,
 				BE85397420DBEF040097063F /* PlanejamentoViewController.swift in Sources */,
@@ -501,6 +488,7 @@
 				BEA12D5E20D458A10015A526 /* ShoppingListViewController.swift in Sources */,
 				BEC326AC20D9797300DA05FC /* AddReceiveTableViewCell.swift in Sources */,
 				BEA12D6520D7EF000015A526 /* RecipeViewController.swift in Sources */,
+				BEC294F020DC52A700389F47 /* RecipeViewControllerDelegate.swift in Sources */,
 				BEA12D6A20D922560015A526 /* PlannerCollectionViewCell.swift in Sources */,
 				BED9CD4020CEB20000C716CB /* Ingridient.swift in Sources */,
 				BEA12D6820D920F80015A526 /* PlannerViewController.swift in Sources */,
