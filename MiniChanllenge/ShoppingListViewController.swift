@@ -11,7 +11,7 @@ import UIKit
 class ShoppingListViewController: UIViewController {
     @IBOutlet weak var txtList: UILabel!
     @IBOutlet weak var txtTotal: UILabel!
-    //weak var delegate: sendFoodDelegate!
+    
     @IBOutlet weak var tvListaCompras: UITableView!
     
     
@@ -19,8 +19,8 @@ class ShoppingListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        txtList = LabelFormatter.estiloDeCabecalhoDaPagina(parameter: txtList, text: "Lista de Compras")
-        txtTotal = LabelFormatter.estiloDeSubtitulo(parameter: txtTotal, text: "Total: R$ 200,00")
+        txtList = LabelFormatter.estiloDeCabecalhoDaPagina(parameter: txtList, text: "Lista de Compras", x: 17, y: 62)
+        txtTotal = LabelFormatter.estiloDeSubtitulo(parameter: txtTotal, text: "Total: R$ 200,00", x: 17, y: 108)
         
         
         self.tvListaCompras.separatorColor = #colorLiteral(red: 0.3449999988, green: 0.5839999914, blue: 0.1920000017, alpha: 0.4469999969)
@@ -68,8 +68,3 @@ extension ShoppingListViewController: UITableViewDataSource, UITableViewDelegate
     
     
 }
-
-//protocol sendFoodDelegate: class {
-//    func sendFood(foods: [String])
-//}
-

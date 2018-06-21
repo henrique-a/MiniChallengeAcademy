@@ -16,28 +16,8 @@ class PlannerViewController: UIViewController, UICollectionViewDelegate, UIColle
     @IBOutlet weak var tvPlanner: UITableView!
     @IBOutlet weak var collectionPlanner: UICollectionView!
     
-    //Array teste Receitas
-    var arrayReceitas: [ReceitaTeste] = []
-    var refeicoes = ["Café da Manhã", "Lanche da Manhã", "Almoço", "Lance da Tarde", "Jantar", "Ceia"]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       // Teste
-        let receita = ReceitaTeste.init(aNome: "Vitamina de Banana", aIngredientes: "100 ml de leite \n2 bananas", aPreparo: "1. Faça isso \n2. Faça aquilo \n3. Faça aquilo outro \n4. Prontinho", aTempo: "5,00 min", aImagem: #imageLiteral(resourceName: "StrawberryBananaSmoothie.jpg"))
-        let receita2 = ReceitaTeste.init(aNome: "Algodão doce", aIngredientes: "1 xic de Açúcar\n1 colher de corante \npalito de cheurrasco", aPreparo: "1. Faça isso \n2. Faça aquilo \n3. Faça aquilo outro \n4. Prontinho", aTempo: "10 min", aImagem: #imageLiteral(resourceName: "3055_1_20170717170346.jpg"))
-        let receita3 = ReceitaTeste.init(aNome: "Pirulito", aIngredientes: "1 xic de Açúcar\n1 colher de corante \npalito de cheurrasco", aPreparo: "1. Faça isso \n2. Faça aquilo \n3. Faça aquilo outro \n4. Prontinho", aTempo: "10 min", aImagem: #imageLiteral(resourceName: "3055_1_20170717170346.jpg"))
-        let receita4 = ReceitaTeste.init(aNome: "Sanduiche", aIngredientes: "1 xic de Açúcar\n1 colher de corante \npalito de cheurrasco", aPreparo: "1. Faça isso \n2. Faça aquilo \n3. Faça aquilo outro \n4. Prontinho", aTempo: "10 min", aImagem: #imageLiteral(resourceName: "3055_1_20170717170346.jpg"))
-        let receita5 = ReceitaTeste.init(aNome: "Salada de frutas", aIngredientes: "1 xic de Açúcar\n1 colher de corante \npalito de cheurrasco", aPreparo: "1. Faça isso \n2. Faça aquilo \n3. Faça aquilo outro \n4. Prontinho", aTempo: "10 min", aImagem: #imageLiteral(resourceName: "3055_1_20170717170346.jpg"))
-        let receita6 = ReceitaTeste.init(aNome: "Pirão de carne", aIngredientes: "1 xic de Açúcar\n1 colher de corante \npalito de cheurrasco", aPreparo: "1. Faça isso \n2. Faça aquilo \n3. Faça aquilo outro \n4. Prontinho", aTempo: "10 min", aImagem: #imageLiteral(resourceName: "3055_1_20170717170346.jpg"))
-        arrayReceitas.append(receita)
-        arrayReceitas.append(receita2)
-        arrayReceitas.append(receita3)
-        arrayReceitas.append(receita4)
-        arrayReceitas.append(receita5)
-        arrayReceitas.append(receita6)
-        
-        
         //Background Config
         self.view.backgroundColor = #colorLiteral(red: 0.8899999857, green: 0.8899999857, blue: 0.8899999857, alpha: 1)
         
@@ -51,7 +31,7 @@ class PlannerViewController: UIViewController, UICollectionViewDelegate, UIColle
         self.collectionPlanner.collectionViewLayout = layout
         
         //Label's Config
-        txtPlanner = LabelFormatter.estiloDeCabecalhoDaPagina(parameter: txtPlanner, text: "Agenda")
+        txtPlanner = LabelFormatter.estiloDeCabecalhoDaPagina(parameter: txtPlanner, text: "Agenda", x: 0, y: 0)
         
         //Button Config
         btnList.setImage(#imageLiteral(resourceName: "symbol271.png") , for: .normal)
@@ -85,39 +65,18 @@ class PlannerViewController: UIViewController, UICollectionViewDelegate, UIColle
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func btnCallList(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "List", sender: nil)
-    }
-   
-//    @IBAction func btnCallAddRecipe(_ sender: UIButton) {
-//        self.performSegue(withIdentifier: "AddRecipe", sender: arrayReceitas[])
-//    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "List" {
-            //let controller = segue.destination as! ShoppingListViewController
-            //controller.delegate = self
-        }
-        
-        else if segue.identifier == "AddRecipe" {
-            let controller = segue.destination as! AddReceiveViewController
-            controller.delegate = self as? RecipeViewControllerDelegate
-            controller.recipe2 = sender as? ReceitaTeste
-        }
-        
-        else if segue.identifier == "Recipe" {
-            let controller = segue.destination as! RecipeViewController
-            controller.delegate = self as? RecipeViewControllerDelegate
-            controller.recipe = sender as? ReceitaTeste
-        }
-    }
-}
 
-//extension PlannerViewController: sendFoodDelegate {
-//    func sendFood(foods: [String]) {
-//        <#code#>
-//    }
-//}
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}
 
 extension PlannerViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -127,18 +86,14 @@ extension PlannerViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tvPlanner.dequeueReusableCell(withIdentifier: "PlannerTableView") as! PlannerTableViewCell
         
-        cell.txtMeal.text = refeicoes[indexPath.row]
+        cell.txtMeal.text = "Café da Manhã"
         cell.txtTime.text = "07:00"
-        cell.txtMealDetails.text = arrayReceitas[indexPath.row].nome
+        cell.txtMealDetails.text = "Vitamina de Banana"
         cell.btnAddMeal.setTitle("Adicionar", for: .normal)
         cell.btnCheckMeal.setTitle("", for: .normal)
         cell.selectionStyle = .none
 
         tvPlanner.rowHeight = 120
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "Recipe", sender: arrayReceitas[indexPath.row])
     }
 }

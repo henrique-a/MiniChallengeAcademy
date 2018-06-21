@@ -27,9 +27,9 @@ class AddCalendarViewController: UIViewController {
         self.view.backgroundColor = #colorLiteral(red: 0.8899999857, green: 0.8899999857, blue: 0.8899999857, alpha: 1)
         
         //Set Labels Config.
-        txtAddCalendar = LabelFormatter.estiloDeCabecalhoDaPagina(parameter: txtAddCalendar, text: "Adicionar na Agenda")
-        txtCalendar = LabelFormatter.estiloDeSubtitulo(parameter: txtCalendar, text: "Agenda Atual")
-        txtCurrentWeek = LabelFormatter.estiloDePeriodoDeDias(parameter: txtCurrentWeek, text: "15/05/2018 - 17/05/2018")
+        txtAddCalendar = LabelFormatter.estiloDeCabecalhoDaPagina(parameter: txtAddCalendar, text: "Adicionar na Agenda", x: 18, y: 64)
+        txtCalendar = LabelFormatter.estiloDeSubtitulo(parameter: txtCalendar, text: "Agenda Atual", x: 18, y: 117)
+        txtCurrentWeek = LabelFormatter.estiloDePeriodoDeDias(parameter: txtCurrentWeek, text: "15/05/2018 - 17/05/2018", x: 18, y: 143)
         
         
         self.tvWeek.dataSource = self

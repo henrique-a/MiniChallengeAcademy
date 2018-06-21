@@ -19,9 +19,9 @@ class ShoppingListTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Config Label's
-        txtItem = LabelFormatter.estiloDeTextoSimples(parameter: txtItem, text: "")
-        txtDetails = LabelFormatter.estiloDeTextoSimples2(parameter: txtDetails, text: "")
-        txtTotalItens = LabelFormatter.estiloDeTextoSimples2(parameter: txtTotalItens, text: "")
+        txtItem = LabelFormatter.estiloDeTextoSimples(parameter: txtItem, text: "", x: 19, y: 165)
+        txtDetails = LabelFormatter.estiloDeTextoSimples2(parameter: txtDetails, text: "", x: 18, y: 192)
+        txtTotalItens = LabelFormatter.estiloDeTextoSimples2(parameter: txtTotalItens, text: "", x: 294, y: 191)
         
         
         // Config Ckeck Button

@@ -20,10 +20,7 @@ class RecipeViewController: UIViewController {
     @IBOutlet weak var txtPrepare: UILabel!
     @IBOutlet weak var txtPrepareDetails: UILabel!
     
-    var delegate: RecipeViewControllerDelegate?
-    var recipe: ReceitaTeste?
-    
-    //var flagFavorite = false
+    var flagFavorite = false
     
     @IBOutlet weak var viewScroll: UIView!
     
@@ -37,23 +34,19 @@ class RecipeViewController: UIViewController {
         viewScroll.backgroundColor = #colorLiteral(red: 0.8899999857, green: 0.8899999857, blue: 0.8899999857, alpha: 1)
         
         //Label's config.
-        txtRecipe = LabelFormatter.estiloDeCabecalhoDaPagina(parameter: txtRecipe, text: "Receita")
-        txtRecipeName = LabelFormatter.estiloDeTextoNomeReceita(parameter: txtRecipeName, text: (recipe?.nome)!)
-        txtPrepareTime = LabelFormatter.estiloDeTextoSimples2(parameter: txtPrepareTime, text: (recipe?.tempo)!)
-        txtIngredients = LabelFormatter.estiloDeTextoIngredientes(parameter: txtIngredients, text: "Você precisará de:")
-        txtIngredientsDetails = LabelFormatter.estiloDeTextoSimples2(parameter: txtIngredientsDetails, text: (recipe?.ingredientes)!)
-        txtPrepare = LabelFormatter.estiloDeTextoIngredientes(parameter: txtPrepare, text: "Mão na massa:")
-        txtPrepareDetails = LabelFormatter.estiloDeTextoSimples2(parameter: txtPrepareDetails, text: (recipe?.preparo)!)
+        txtRecipe = LabelFormatter.estiloDeCabecalhoDaPagina(parameter: txtRecipe, text: "Receita", x: 18, y: 57)
+        txtRecipeName = LabelFormatter.estiloDeTextoNomeReceita(parameter: txtRecipeName, text: "Vitamina de Banana", x: 19, y: 272)
+        txtPrepareTime = LabelFormatter.estiloDeTextoSimples2(parameter: txtPrepareTime, text: "Tempo de preparo: 5 min", x: 19, y: 310)
+        txtIngredients = LabelFormatter.estiloDeTextoIngredientes(parameter: txtIngredients, text: "Você precisará de:", x: 19, y: 438)
+        txtIngredientsDetails = LabelFormatter.estiloDeTextoSimples2(parameter: txtIngredientsDetails, text: "2 Bananas \n100 ml de Leite", x: 46, y: 467)
+        txtPrepare = LabelFormatter.estiloDeTextoIngredientes(parameter: txtPrepare, text: "Mão na massa:", x: 19, y: 546)
+        txtPrepareDetails = LabelFormatter.estiloDeTextoSimples2(parameter: txtPrepareDetails, text: "1. Faça isso \n2. Faça aquilo \n3. Faça aquilo outro \n4. Prontinho", x: 18, y: 600)
         
         //Button's config.
+        //btnFavorite
         btnAdd = ButtonFormatter.buttonLong(parameter: btnAdd, text: "Adicionar na quinta-feira")
         btnFavorite.contentMode = .scaleToFill
-        if recipe?.favorito == false {
-            btnFavorite.setBackgroundImage(#imageLiteral(resourceName: "star-9.png") , for: UIControlState.normal)
-        }
-        else{
-            btnFavorite.setBackgroundImage(#imageLiteral(resourceName: "star-8.png"), for: UIControlState.normal)
-        }
+        btnFavorite.setBackgroundImage(#imageLiteral(resourceName: "star-9.png"), for: .normal)
         btnFavorite.tintColor = #colorLiteral(red: 0.9179999828, green: 0.4629999995, blue: 0.2389999926, alpha: 1)
         
         //Image config
@@ -69,19 +62,25 @@ class RecipeViewController: UIViewController {
     }
     
     @IBAction func favoriteAction(_ sender: UIButton) {
-        if recipe?.favorito == false{
+        if flagFavorite == false{
             sender.setBackgroundImage(#imageLiteral(resourceName: "star-8.png"), for: UIControlState.normal)
-            recipe?.favorito = true
+            flagFavorite = true
             
         }
         else{
             sender.setBackgroundImage(#imageLiteral(resourceName: "star-9.png") , for: UIControlState.normal)
-            recipe?.favorito = false
+            flagFavorite = false
         }
     }
     
-    @IBAction func AddAction(_ sender: UIButton) {
-        //ATENCAO
-        //Adicionar logica do adicionar a agenda
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
     }
+    */
+
 }
