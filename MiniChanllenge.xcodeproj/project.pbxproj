@@ -29,7 +29,6 @@
 		BEA12D6520D7EF000015A526 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA12D6420D7EF000015A526 /* RecipeViewController.swift */; };
 		BEA12D6820D920F80015A526 /* PlannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA12D6720D920F80015A526 /* PlannerViewController.swift */; };
 		BEA12D6A20D922560015A526 /* PlannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA12D6920D922560015A526 /* PlannerCollectionViewCell.swift */; };
-		BEC294EE20DC51B100389F47 /* CoreData in Resources */ = {isa = PBXBuildFile; fileRef = BEC294ED20DC51B100389F47 /* CoreData */; };
 		BEC294F020DC52A700389F47 /* RecipeViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC294EF20DC52A700389F47 /* RecipeViewControllerDelegate.swift */; };
 		BEC326A520D93F2800DA05FC /* PlannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC326A420D93F2800DA05FC /* PlannerTableViewCell.swift */; };
 		BEC326A820D9791700DA05FC /* AddReceiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC326A720D9791700DA05FC /* AddReceiveViewController.swift */; };
@@ -39,7 +38,6 @@
 		BED9CD0B20CEADD400C716CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD0A20CEADD400C716CB /* AppDelegate.swift */; };
 		BED9CD0D20CEADD400C716CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD0C20CEADD400C716CB /* ViewController.swift */; };
 		BED9CD1020CEADD400C716CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED9CD0E20CEADD400C716CB /* Main.storyboard */; };
-		BED9CD1320CEADD500C716CB /* MiniChanllenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD1120CEADD500C716CB /* MiniChanllenge.xcdatamodeld */; };
 		BED9CD1520CEADD500C716CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BED9CD1420CEADD500C716CB /* Assets.xcassets */; };
 		BED9CD1820CEADD500C716CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED9CD1620CEADD500C716CB /* LaunchScreen.storyboard */; };
 		BED9CD2320CEADD500C716CB /* MiniChanllengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD2220CEADD500C716CB /* MiniChanllengeTests.swift */; };
@@ -90,7 +88,6 @@
 		BEA12D6420D7EF000015A526 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		BEA12D6720D920F80015A526 /* PlannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerViewController.swift; sourceTree = "<group>"; };
 		BEA12D6920D922560015A526 /* PlannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerCollectionViewCell.swift; sourceTree = "<group>"; };
-		BEC294ED20DC51B100389F47 /* CoreData */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CoreData; sourceTree = "<group>"; };
 		BEC294EF20DC52A700389F47 /* RecipeViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeViewControllerDelegate.swift; sourceTree = "<group>"; };
 		BEC326A420D93F2800DA05FC /* PlannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerTableViewCell.swift; sourceTree = "<group>"; };
 		BEC326A720D9791700DA05FC /* AddReceiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReceiveViewController.swift; sourceTree = "<group>"; };
@@ -101,7 +98,6 @@
 		BED9CD0A20CEADD400C716CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BED9CD0C20CEADD400C716CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BED9CD0F20CEADD400C716CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BED9CD1220CEADD500C716CB /* MiniChanllenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MiniChanllenge.xcdatamodel; sourceTree = "<group>"; };
 		BED9CD1420CEADD500C716CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BED9CD1720CEADD500C716CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BED9CD1920CEADD500C716CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -114,7 +110,6 @@
 		BED9CD3D20CEB00B00C716CB /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		BED9CD3F20CEB20000C716CB /* Ingridient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingridient.swift; sourceTree = "<group>"; };
 		BED9CD4120CEB29500C716CB /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
-		BEE327F620DBED5300CB3395 /* MiniChanllenge v2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "MiniChanllenge v2.xcdatamodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,7 +282,6 @@
 		BED9CD0920CEADD400C716CB /* MiniChanllenge */ = {
 			isa = PBXGroup;
 			children = (
-				BEC294ED20DC51B100389F47 /* CoreData */,
 				2B71748020D406F3004EC19A /* Fonts */,
 				BED9CD0A20CEADD400C716CB /* AppDelegate.swift */,
 				BED9CD0C20CEADD400C716CB /* ViewController.swift */,
@@ -300,7 +294,6 @@
 				BED9CD1420CEADD500C716CB /* Assets.xcassets */,
 				BED9CD1620CEADD500C716CB /* LaunchScreen.storyboard */,
 				BED9CD1920CEADD500C716CB /* Info.plist */,
-				BED9CD1120CEADD500C716CB /* MiniChanllenge.xcdatamodeld */,
 			);
 			path = MiniChanllenge;
 			sourceTree = "<group>";
@@ -433,7 +426,6 @@
 				2B71749120D40834004EC19A /* Raleway-Medium.ttf in Resources */,
 				BED9CD1820CEADD500C716CB /* LaunchScreen.storyboard in Resources */,
 				2B71749020D40834004EC19A /* Raleway-Light.ttf in Resources */,
-				BEC294EE20DC51B100389F47 /* CoreData in Resources */,
 				2B71748E20D40834004EC19A /* Raleway-Bold.ttf in Resources */,
 				2B71748820D40827004EC19A /* MavenPro-Bold.ttf in Resources */,
 				BED9CD1520CEADD500C716CB /* Assets.xcassets in Resources */,
@@ -476,7 +468,6 @@
 				BE85396120DBC42A0097063F /* PlannerTableViewDelegate.swift in Sources */,
 				BED9CD4220CEB29500C716CB /* Recipe.swift in Sources */,
 				BEA12D5B20D444F60015A526 /* AddCalendarTableViewCell.swift in Sources */,
-				BED9CD1320CEADD500C716CB /* MiniChanllenge.xcdatamodeld in Sources */,
 				BED9CD0D20CEADD400C716CB /* ViewController.swift in Sources */,
 				BED9CD0B20CEADD400C716CB /* AppDelegate.swift in Sources */,
 				BEC326A520D93F2800DA05FC /* PlannerTableViewCell.swift in Sources */,
@@ -785,20 +776,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		BED9CD1120CEADD500C716CB /* MiniChanllenge.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				BEE327F620DBED5300CB3395 /* MiniChanllenge v2.xcdatamodel */,
-				BED9CD1220CEADD500C716CB /* MiniChanllenge.xcdatamodel */,
-			);
-			currentVersion = BEE327F620DBED5300CB3395 /* MiniChanllenge v2.xcdatamodel */;
-			path = MiniChanllenge.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = BED9CCFF20CEADD400C716CB /* Project object */;
 }
