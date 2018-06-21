@@ -65,16 +65,22 @@ class ViewController: UIViewController {
         
         var user: User? = nil
         
+        
+
+        
         if CoreDataHandler.saveUser(name: "Henrique", buyingFrequency: "1", shoppingList: ["Cebola", "Banana", "Manteiga"]) {
-            user = CoreDataHandler.fetchUser()?[8]
+            user = CoreDataHandler.fetchUser()?.last
+            
             print(user?.name)
+            
             print(user?.shoppingList![1])
         }
         
-        if CoreDataHandler.saveDaySchedule(date: Date(), recipe: "teste", user: (CoreDataHandler.fetchUser()?[8])!) {
-            user = CoreDataHandler.fetchUser()?[8]
-            print(user?.schedule?.recipe)
+        if CoreDataHandler.saveDaySchedule(date: Date(), recipe: ["teste", "teste2"], user: (CoreDataHandler.fetchUser()?[0])!) {
+            user = CoreDataHandler.fetchUser()?.last
+            print(user?.schedule?.recipe![1])
         }
+        
     }
     
     
