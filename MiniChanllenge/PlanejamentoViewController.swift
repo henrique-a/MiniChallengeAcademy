@@ -16,6 +16,20 @@ class PlanejamentoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        
+        mealsPlanning = [
+                        MealPlanningOnWeek(name: "Café da manhã"),
+                        MealPlanningOnWeek(name: "Lanche da manhã"),
+                        MealPlanningOnWeek(name: "Almoço"),
+                        MealPlanningOnWeek(name: "Lanche da tarde"),
+                        MealPlanningOnWeek(name: "Janta"),
+                        MealPlanningOnWeek(name: "Ceia")]
+        
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        
 //        tituloLabel.font = UIFont.estiloDeCabecalhoDaPagina
         tituloLabel.textColor = UIColor(named: "mossyGreen")
         
