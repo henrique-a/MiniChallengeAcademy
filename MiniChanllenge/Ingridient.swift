@@ -27,5 +27,5 @@ public struct Ingridient: Decodable {
         self.quantity = try values.decode(Float.self, forKey: .quantity)
         self.unity = try values.decode(String.self, forKey: .unity)
         self.price = try values.decode(Float.self, forKey: .price)
-    }
+    }git 
 }

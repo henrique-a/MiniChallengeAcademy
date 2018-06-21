@@ -17,14 +17,16 @@ class AddReceiveViewController: UIViewController {
     @IBOutlet weak var txtFavorites: UILabel!
     @IBOutlet weak var txtMeal: UILabel!
     
+    var recipes: [Recipe] = []
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         //Label's Config
-        txtAddReceipe = LabelFormatter.estiloDeCabecalhoDaPagina(parameter: txtAddReceipe, text: "Adicionar Receita", x: 0, y: 0)
-        txtFavorites = LabelFormatter.estiloDeTituloDeSecao(parameter: txtFavorites, text: "Favoritos", x: 0, y: 0)
-        txtMeal = LabelFormatter.estiloDeTituloDeSecao(parameter: txtMeal, text: "Café da Manhã", x: 0, y: 0)
+        txtAddReceipe = LabelFormatter.estiloDeCabecalhoDaPagina(parameter: txtAddReceipe, text: "Adicionar Receita")
+        txtFavorites = LabelFormatter.estiloDeTituloDeSecao(parameter: txtFavorites, text: "Favoritos")
+        txtMeal = LabelFormatter.estiloDeTituloDeSecao(parameter: txtMeal, text: "Café da Manhã")
         
         view1.backgroundColor = #colorLiteral(red: 0.8899999857, green: 0.8899999857, blue: 0.8899999857, alpha: 1)
         self.view.backgroundColor = #colorLiteral(red: 0.8899999857, green: 0.8899999857, blue: 0.8899999857, alpha: 1)
@@ -47,6 +49,11 @@ class AddReceiveViewController: UIViewController {
         
         //Add in subviews
         //self.view1.addSubview(cvMeal)
+        getData() { (response) in
+            if let responseArray = response as? [Recipe] {
+                self.recipes = responseArray
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,43 +61,86 @@ class AddReceiveViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func getData(completionHandler: @escaping ([Recipe]) -> Void) {
+        let jsonURL = "https://henriqueapi.herokuapp.com/recipes/?format=json"
+        
+        guard let url = URL(string: jsonURL) else { return }
+        
+        URLSession.shared.dataTask(with: url) { (data, response, err)  in
+            
+            guard let data = data else { return }
+            do {
+                let recipes: [Recipe] = try JSONDecoder().decode([Recipe].self, from: data)
+                DispatchQueue.main.async {
+                    completionHandler(recipes)
+                    self.tvAddReceive.reloadData()
+                    self.cvMeal.reloadData()
+                }
+            } catch {
+                
+            }
+            }.resume()
     }
-    */
+    
+    
+
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Recipe" {
+            let controller = segue.destination as! RecipeViewController
+            controller.delegate = self as? RecipeViewControllerDelegate
+//            controller.txtRecipeName.text = "Algodão Doce"
+//            controller.imgRecipe.image = #imageLiteral(resourceName: "3055_1_20170717170346.jpg")
+            
+        }
+    }
 
 }
 
-extension AddReceiveViewController: UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource{
+extension AddReceiveViewController: UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.cvMeal{
-            return 5
+            print(self.recipes.count)
+            return self.recipes.count
         } else {
-           return 5
+            print(self.recipes.count)
+            return self.recipes.count
         }
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        performSegue(withIdentifier: "Recipe", sender: cell)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.cvMeal{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AddRecieveCollectionCell2", for: indexPath) as! AddReceive2CollectionViewCell
-            cell.imgCollection2.image = #imageLiteral(resourceName: "StrawberryBananaSmoothie.jpg")
-            cell.lblCollection2.text = "Vitamina"
-            
+            if !self.recipes.isEmpty {
+                let recipe = self.recipes[indexPath.row]
+                cell.imgCollection2.image = recipe.image
+                cell.lblCollection2.text = recipe.name
+                
+            } else {
+                cell.imgCollection2.image = #imageLiteral(resourceName: "StrawberryBananaSmoothie.jpg")
+                cell.lblCollection2.text = "Vitamina"
+            }
+    
             return cell
         }
-        else{
+        else {
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionInsideCell", for: indexPath) as? AddReceiveCollectionViewCell {
-                cell.imgReceipe.image = #imageLiteral(resourceName: "3055_1_20170717170346.jpg")
-                cell.txtReceipeName.text = "Algodão Doce"
-                //cell.layer.cornerRadius = cell.bounds.height / 2.0
-                
+                if !self.recipes.isEmpty {
+                    let recipe = self.recipes[indexPath.row]
+                    cell.imgReceipe.image = recipe.image
+                    cell.txtReceipeName.text = recipe.name
+                    
+                } else {
+                    cell.imgReceipe.image = #imageLiteral(resourceName: "3055_1_20170717170346.jpg")
+                    cell.txtReceipeName.text = "Algodão Doce"
+                    //cell.layer.cornerRadius = cell.bounds.height / 2.0
+                }
                 return cell
             }
         }
@@ -123,4 +173,6 @@ extension AddReceiveViewController: UITableViewDelegate, UITableViewDataSource, 
         return 100
         
     }
+    
+    
 }
