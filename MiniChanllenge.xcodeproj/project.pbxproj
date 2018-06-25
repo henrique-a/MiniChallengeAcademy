@@ -33,6 +33,10 @@
 		BEA12D6820D920F80015A526 /* PlannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA12D6720D920F80015A526 /* PlannerViewController.swift */; };
 		BEA12D6A20D922560015A526 /* PlannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA12D6920D922560015A526 /* PlannerCollectionViewCell.swift */; };
 		BEC02D9D20DA9FA300AB1191 /* Cibele.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEA12D4620D3F9080015A526 /* Cibele.storyboard */; };
+		BEC294F220DC61B200389F47 /* Controladora.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC294F120DC61B200389F47 /* Controladora.swift */; };
+		BEC294F420DDA40600389F47 /* RefeicaoDia.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC294F320DDA40600389F47 /* RefeicaoDia.swift */; };
+		BEC294F620DDA41500389F47 /* RefeicaoSemana.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC294F520DDA41500389F47 /* RefeicaoSemana.swift */; };
+		BEC294F820DDA46E00389F47 /* Refeicao.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC294F720DDA46E00389F47 /* Refeicao.swift */; };
 		BEC326A520D93F2800DA05FC /* PlannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC326A420D93F2800DA05FC /* PlannerTableViewCell.swift */; };
 		BEC326A820D9791700DA05FC /* AddReceiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC326A720D9791700DA05FC /* AddReceiveViewController.swift */; };
 		BEC326AA20D9795E00DA05FC /* AddReceiveCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC326A920D9795E00DA05FC /* AddReceiveCollectionViewCell.swift */; };
@@ -96,6 +100,10 @@
 		BEA12D6420D7EF000015A526 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		BEA12D6720D920F80015A526 /* PlannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerViewController.swift; sourceTree = "<group>"; };
 		BEA12D6920D922560015A526 /* PlannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerCollectionViewCell.swift; sourceTree = "<group>"; };
+		BEC294F120DC61B200389F47 /* Controladora.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controladora.swift; sourceTree = "<group>"; };
+		BEC294F320DDA40600389F47 /* RefeicaoDia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefeicaoDia.swift; sourceTree = "<group>"; };
+		BEC294F520DDA41500389F47 /* RefeicaoSemana.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefeicaoSemana.swift; sourceTree = "<group>"; };
+		BEC294F720DDA46E00389F47 /* Refeicao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refeicao.swift; sourceTree = "<group>"; };
 		BEC326A420D93F2800DA05FC /* PlannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerTableViewCell.swift; sourceTree = "<group>"; };
 		BEC326A720D9791700DA05FC /* AddReceiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReceiveViewController.swift; sourceTree = "<group>"; };
 		BEC326A920D9795E00DA05FC /* AddReceiveCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReceiveCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -210,6 +218,10 @@
 				BEA12D5820D441AB0015A526 /* Components Formatter */,
 				BEA12D4620D3F9080015A526 /* Cibele.storyboard */,
 				BE422E0B20DAC293003449A8 /* ReceitaTeste.swift */,
+				BEC294F120DC61B200389F47 /* Controladora.swift */,
+				BEC294F520DDA41500389F47 /* RefeicaoSemana.swift */,
+				BEC294F320DDA40600389F47 /* RefeicaoDia.swift */,
+				BEC294F720DDA46E00389F47 /* Refeicao.swift */,
 			);
 			name = FrontEnd;
 			sourceTree = "<group>";
@@ -485,8 +497,10 @@
 				BEA12D6020D45D390015A526 /* ShoppingListTableViewCell.swift in Sources */,
 				BED9CD3E20CEB00B00C716CB /* Meal.swift in Sources */,
 				BE80359620DC331B00059788 /* InitialViewController.swift in Sources */,
+				BEC294F420DDA40600389F47 /* RefeicaoDia.swift in Sources */,
 				BEA12D5520D42DBB0015A526 /* LabelFormatter.swift in Sources */,
 				BEA12D5320D42C690015A526 /* AddCalendarViewController.swift in Sources */,
+				BEC294F820DDA46E00389F47 /* Refeicao.swift in Sources */,
 				BE85396120DBC42A0097063F /* PlannerTableViewDelegate.swift in Sources */,
 				BED9CD4220CEB29500C716CB /* Recipe.swift in Sources */,
 				BEA12D5B20D444F60015A526 /* AddCalendarTableViewCell.swift in Sources */,
@@ -496,12 +510,14 @@
 				BED9CD0B20CEADD400C716CB /* AppDelegate.swift in Sources */,
 				BEC326A520D93F2800DA05FC /* PlannerTableViewCell.swift in Sources */,
 				BEC326AE20D9AD1700DA05FC /* AddReceive2CollectionViewCell.swift in Sources */,
+				BEC294F620DDA41500389F47 /* RefeicaoSemana.swift in Sources */,
 				BE85397420DBEF040097063F /* PlanejamentoViewController.swift in Sources */,
 				BE85397520DBEF040097063F /* MealPlanningOnWeek.swift in Sources */,
 				BEC326AA20D9795E00DA05FC /* AddReceiveCollectionViewCell.swift in Sources */,
 				BEA12D5720D43D050015A526 /* ButtonFormatter.swift in Sources */,
 				BEA12D5E20D458A10015A526 /* ShoppingListViewController.swift in Sources */,
 				BEC326AC20D9797300DA05FC /* AddReceiveTableViewCell.swift in Sources */,
+				BEC294F220DC61B200389F47 /* Controladora.swift in Sources */,
 				BEA12D6520D7EF000015A526 /* RecipeViewController.swift in Sources */,
 				BEA12D6A20D922560015A526 /* PlannerCollectionViewCell.swift in Sources */,
 				BE80359920DC3FA800059788 /* SettingsViewController.swift in Sources */,

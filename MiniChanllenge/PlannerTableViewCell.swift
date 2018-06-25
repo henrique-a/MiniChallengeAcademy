@@ -20,6 +20,7 @@ class PlannerTableViewCell: UITableViewCell {
     var delegate: PlannerTableViewDelegate?
     
     var tableLine: Int = -1
+    var dia: String = ""
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -60,7 +61,7 @@ class PlannerTableViewCell: UITableViewCell {
     
     @IBAction func btnCallAddRecipe(_ sender: UIButton) {
         print("Clicou")
-        delegate?.btnTouched(row: tableLine)
+        delegate?.btnTouched(row: tableLine, dia: dia)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

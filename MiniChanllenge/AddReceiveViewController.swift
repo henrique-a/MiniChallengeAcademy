@@ -17,14 +17,29 @@ class AddReceiveViewController: UIViewController {
     @IBOutlet weak var txtFavorites: UILabel!
     @IBOutlet weak var txtMeal: UILabel!
 
+    var fluxo: Int!
+    var mealsPlanning2 = [MealPlanningOnWeek]()
+    var meal: String!
+    var dia: String!
+    //var recipe: RefeicaoDia
+    //Array teste Receitas
+    typealias arrayreceitas = Controladora
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
         //Label's Config
         txtAddReceipe = LabelFormatter.estiloDeCabecalhoDaPagina(parameter: txtAddReceipe, text: "Adicionar Receita")
         txtFavorites = LabelFormatter.estiloDeTituloDeSecao(parameter: txtFavorites, text: "Favoritos")
-        txtMeal = LabelFormatter.estiloDeTituloDeSecao(parameter: txtMeal, text: "Café da Manhã")
+        
+        if fluxo == 2 {
+            let refeicao = mealsPlanning2[0].name
+            print(refeicao)
+            txtMeal = LabelFormatter.estiloDeTituloDeSecao(parameter: txtMeal, text: refeicao)
+        }
+        else if fluxo == 1{
+            txtMeal = LabelFormatter.estiloDeTituloDeSecao(parameter: txtMeal, text: meal)
+        }
         
         view1.backgroundColor = #colorLiteral(red: 0.8899999857, green: 0.8899999857, blue: 0.8899999857, alpha: 1)
         self.view.backgroundColor = #colorLiteral(red: 0.8899999857, green: 0.8899999857, blue: 0.8899999857, alpha: 1)
@@ -55,13 +70,21 @@ class AddReceiveViewController: UIViewController {
 
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "Recipe" {
-            
+
+        if fluxo == 1{//fluxo do planner/agenda
             let controller = segue.destination as! RecipeViewController
             controller.delegate = self as? RecipeViewControllerDelegate
             controller.recipe = sender as? ReceitaTeste
-            print("chegou aqui")
-            
+            controller.btnAuxiliar = "Adicionar nesta refeição"
+        }
+        else if fluxo == 2{//fluxo do planejamento
+            let controller = segue.destination as! RecipeViewController
+            controller.delegate = self as? RecipeViewControllerDelegate
+            controller.recipe = sender as? ReceitaTeste
+            controller.btnAuxiliar = "Adicionar na agenda"
+        }
+        else{
+            print("Erro ao chamar a tela 'Receita'")
         }
     }
 
@@ -70,32 +93,54 @@ class AddReceiveViewController: UIViewController {
 extension AddReceiveViewController: UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.cvMeal{
-            return 5
+            return arrayreceitas.controladora.receitas.count
         } else {
-           return 5
+           return arrayreceitas.controladora.favoritos.count
         }
         
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath)
-        performSegue(withIdentifier: "Recipe", sender: nil)
+        //let cell = collectionView.cellForItem(at: indexPath)
+        
+        if collectionView == self.cvMeal{
+            performSegue(withIdentifier: "Recipe", sender: arrayreceitas.controladora.receitas[indexPath.row])
+            //print (arrayreceitas.controladora.receitas[indexPath.row])
+        }
+        else{
+            performSegue(withIdentifier: "Recipe", sender: arrayreceitas.controladora.favoritos[indexPath.row])
+            //print (arrayreceitas.controladora.favoritos[indexPath.row])
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.cvMeal{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AddRecieveCollectionCell2", for: indexPath) as! AddReceive2CollectionViewCell
-            cell.imgCollection2.image = #imageLiteral(resourceName: "StrawberryBananaSmoothie.jpg")
-            cell.lblCollection2.text = "Vitamina"
+            cell.imgCollection2.image = arrayreceitas.controladora.receitas[indexPath.row].imagem
+            cell.lblCollection2.text = arrayreceitas.controladora.receitas[indexPath.row].nome
             
             return cell
         }
         else{
-            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionInsideCell", for: indexPath) as? AddReceiveCollectionViewCell {
-                cell.imgReceipe.image = #imageLiteral(resourceName: "3055_1_20170717170346.jpg")
-                cell.txtReceipeName.text = "Algodão Doce"
-                
-                return cell
+        
+            //testando
+            if (indexPath.row % 2) == 0 {
+                if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionInsideCell", for: indexPath) as? AddReceiveCollectionViewCell {
+                    cell.imgReceipe.image = arrayreceitas.controladora.favoritos[indexPath.row].imagem
+                    cell.txtReceipeName.text = arrayreceitas.controladora.favoritos[indexPath.row].nome
+//                    print("Case 3")
+//                    print(indexPath.row)
+                    return cell
+                }
+            }
+            else{
+                if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionInsideCell", for: indexPath) as? AddReceiveCollectionViewCell {
+                    cell.imgReceipe.image = arrayreceitas.controladora.favoritos[indexPath.row].imagem
+                    cell.txtReceipeName.text = arrayreceitas.controladora.favoritos[indexPath.row].nome
+//                    print("Case 4")
+//                    print(indexPath.row)
+                    return cell
+                }
             }
         }
         
@@ -108,13 +153,35 @@ extension AddReceiveViewController: UITableViewDelegate, UITableViewDataSource, 
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tvAddReceive.dequeueReusableCell(withIdentifier: "TableViewAddReceiveCell", for: indexPath)
-    
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewAddReceiveCell")
+        return cell!
+        
+//        //testes
+//        switch indexPath.row {
+//        case 0:
+//            print("Case 0")
+//            print(indexPath.row)
+//            return cell!
+//        default:
+//            print("Case 1")
+//            print(indexPath.row)
+//            return cell!
+//        }
+        
+//        if indexPath.row == 0 {
+//            let cell = tvAddReceive.dequeueReusableCell(withIdentifier: "TableViewAddReceiveCell", for: indexPath)
+//            return cell
+//        }
+//        else{
+//            let cell = tvAddReceive.dequeueReusableCell(withIdentifier: "TableViewAddReceiveCell", for: indexPath)
+//            return cell
+//        }
+        
+        
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -128,5 +195,7 @@ extension AddReceiveViewController: UITableViewDelegate, UITableViewDataSource, 
         
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "Recipe", sender: arrayreceitas.controladora.favoritos[indexPath.row])
+    }
 }

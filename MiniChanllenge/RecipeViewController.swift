@@ -22,11 +22,12 @@ class RecipeViewController: UIViewController {
     
     var delegate: RecipeViewControllerDelegate?
     var recipe: ReceitaTeste?
-    
-    //var flagFavorite = false
+    var dia: String?
+    var btnAuxiliar: String!
+    var meal: String? 
+    typealias arrayreceitas = Controladora
     
     @IBOutlet weak var viewScroll: UIView!
-    
     @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
@@ -46,7 +47,7 @@ class RecipeViewController: UIViewController {
         txtPrepareDetails = LabelFormatter.estiloDeTextoSimples2(parameter: txtPrepareDetails, text: (recipe?.preparo)!)
         
         //Button's config.
-        btnAdd = ButtonFormatter.buttonLong(parameter: btnAdd, text: "Adicionar na quinta-feira")
+        btnAdd = ButtonFormatter.buttonLong(parameter: btnAdd, text: btnAuxiliar)
         btnFavorite.contentMode = .scaleToFill
         if recipe?.favorito == false {
             btnFavorite.setBackgroundImage(#imageLiteral(resourceName: "star-9.png") , for: UIControlState.normal)
@@ -57,7 +58,7 @@ class RecipeViewController: UIViewController {
         btnFavorite.tintColor = #colorLiteral(red: 0.9179999828, green: 0.4629999995, blue: 0.2389999926, alpha: 1)
         
         //Image config
-        imgRecipe.image = #imageLiteral(resourceName: "StrawberryBananaSmoothie.jpg")
+        imgRecipe.image = recipe?.imagem
         imgRecipe.contentMode = .scaleAspectFill
         imgRecipe.clipsToBounds = true
         imgRecipe.layer.cornerRadius = 20
@@ -67,21 +68,58 @@ class RecipeViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let controller = segue.destination as! AddCalendarViewController
+        controller.recipe = sender as! ReceitaTeste
+        
+    }
     
     @IBAction func favoriteAction(_ sender: UIButton) {
         if recipe?.favorito == false{
             sender.setBackgroundImage(#imageLiteral(resourceName: "star-8.png"), for: UIControlState.normal)
+            arrayreceitas.controladora.favoritos.append(recipe!)
+            
+//            print(arrayreceitas.controladora.favoritos.count)
+//            for var receita in arrayreceitas.controladora.favoritos{
+//                print(receita.nome)
+//            }
+            
             recipe?.favorito = true
             
         }
         else{
             sender.setBackgroundImage(#imageLiteral(resourceName: "star-9.png") , for: UIControlState.normal)
+            var i = 0
+            for var receita in arrayreceitas.controladora.favoritos{
+                if receita.nome == recipe!.nome && receita.ingredientes == recipe!.ingredientes {
+                    
+                    arrayreceitas.controladora.favoritos.remove(at: i)
+                    i = 0
+                    break
+                }
+                else{
+                    
+                    i = i + 1
+                }
+            }
             recipe?.favorito = false
         }
     }
     
     @IBAction func AddAction(_ sender: UIButton) {
-        //ATENCAO
-        //Adicionar logica do adicionar a agenda
+        if btnAuxiliar == "Remover"{
+            //Logica para remover a receita da refeição
+        }
+        else if btnAuxiliar == "Adicionar nesta refeição"{
+            //Logica para add numa refeicao especifica
+            //print(arrayreceitas.controladora.mealsPlanning[0].name)
+        }
+        else if btnAuxiliar == "Adicionar na agenda"{
+            //chama a tela add na agenda
+            self.performSegue(withIdentifier: "AddCalendar", sender: recipe)
+        }
+        else{
+            print("Erro na tela 'Receita': Chamada de botão inválida")
+        }
     }
 }

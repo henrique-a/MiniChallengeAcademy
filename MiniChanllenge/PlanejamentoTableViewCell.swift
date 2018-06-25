@@ -22,10 +22,17 @@ class PlanejamentoTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+
+        //Config View
         view.layer.cornerRadius = 15.0
-        view.clipsToBounds = true
+        view.layer.shadowColor = #colorLiteral(red: 0.4390000105, green: 0.4390000105, blue: 0.4390000105, alpha: 1)
+        view.layer.shadowRadius = 1
+        view.layer.shadowOpacity = 0.3
+        view.layer.shadowOffset = CGSize.init(width: 3.0, height: 5.0)
+        view.clipsToBounds = false
+        view.layer.masksToBounds = false
         
+        //Label's Config
         var segLabel = UILabel(frame: CGRect(x: dayLabelInitalX, y: dayLabelPosY, width: 30.0, height: 15.0))
         segLabel = LabelFormatter.estiloDeDiasDeCardDePlanejameto(parameter: segLabel, text: "Seg")
         daysLabelArr.append(segLabel)

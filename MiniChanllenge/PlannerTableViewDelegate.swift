@@ -8,6 +8,6 @@
 
 import Foundation
 protocol  PlannerTableViewDelegate{
-    func btnTouched(row: Int) -> Void
+    func btnTouched(row: Int, dia: String) -> Void
     
 }

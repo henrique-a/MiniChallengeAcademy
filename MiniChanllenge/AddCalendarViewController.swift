@@ -15,6 +15,7 @@ class AddCalendarViewController: UIViewController {
     @IBOutlet weak var txtCurrentWeek: UILabel!
     
     @IBOutlet weak var tvWeek: UITableView!
+    var recipe: ReceitaTeste!
     
     var arrayWeek: [String]! = nil
     

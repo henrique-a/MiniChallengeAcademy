@@ -15,7 +15,7 @@ struct MealPlanningOnWeek {
     
     init(name: String) {
         self.name = name
-        days = ["Seg": false, "Ter": true, "Qua": false, "Qui": false, "Sex": false, "Sab": false, "Dom": false]
+        days = ["Seg": false, "Ter": false, "Qua": false, "Qui": false, "Sex": false, "Sab": false, "Dom": false]
     }
     
 }

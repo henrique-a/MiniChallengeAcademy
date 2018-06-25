@@ -30,7 +30,6 @@ class PlannerCollectionViewCell: UICollectionViewCell {
         txtWeekDay = LabelFormatter.estiloDeTextoSemanaMes(parameter: txtWeekDay, text: "")
         txtDay = LabelFormatter.estiloDeTextoDia(parameter: txtDay, text: "")
         txtMonth = LabelFormatter.estiloDeTextoSemanaMes(parameter: txtMonth, text: "")
-        
     }
    
 }
