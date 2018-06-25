@@ -39,7 +39,7 @@ class ViewController: UIViewController {
     
     func getData(completionHandler: @escaping ([Recipe]) -> Void) {
         let jsonURL = "https://henriqueapi.herokuapp.com/recipes/?format=json"
-
+        
         guard let url = URL(string: jsonURL) else { return }
         
         URLSession.shared.dataTask(with: url) { (data, response, err)  in
@@ -58,7 +58,6 @@ class ViewController: UIViewController {
     }
     
     func saveData(recipes: [Recipe]) {
-        /*
         let imageView = UIImageView(frame: CGRect(x:0, y:0, width:200, height:200))
         imageView.contentMode = UIViewContentMode.scaleAspectFit
         self.view.addSubview(imageView)
@@ -67,17 +66,20 @@ class ViewController: UIViewController {
         var user: User? = nil
         
         if CoreDataHandler.saveUser(name: "Henrique", buyingFrequency: "1", shoppingList: ["Cebola", "Banana", "Manteiga"]) {
-            user = CoreDataHandler.fetchUser()?[8]
+            user = CoreDataHandler.fetchUser()?.last
+            
             print(user?.name)
+            
             print(user?.shoppingList![1])
         }
         
-        if CoreDataHandler.saveDaySchedule(date: Date(), recipe: "teste", user: (CoreDataHandler.fetchUser()?[8])!) {
-            user = CoreDataHandler.fetchUser()?[8]
-            print(user?.schedule?.recipe)
-        } */
+        if CoreDataHandler.saveDaySchedule(date: Date(), recipe: ["teste", "teste2"], user: (CoreDataHandler.fetchUser()?[0])!) {
+            user = CoreDataHandler.fetchUser()?.last
+            print(user?.schedule?.recipe![1])
+        }
+        
     }
-    
+
     
     
     

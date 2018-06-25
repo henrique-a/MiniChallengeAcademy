@@ -54,6 +54,11 @@
 		BED9CD3E20CEB00B00C716CB /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD3D20CEB00B00C716CB /* Meal.swift */; };
 		BED9CD4020CEB20000C716CB /* Ingridient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD3F20CEB20000C716CB /* Ingridient.swift */; };
 		BED9CD4220CEB29500C716CB /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9CD4120CEB29500C716CB /* Recipe.swift */; };
+		BEE6013F20E1081100895428 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE6013A20E1081100895428 /* User+CoreDataClass.swift */; };
+		BEE6014020E1081100895428 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE6013B20E1081100895428 /* User+CoreDataProperties.swift */; };
+		BEE6014120E1081100895428 /* DaySchedule+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE6013C20E1081100895428 /* DaySchedule+CoreDataClass.swift */; };
+		BEE6014220E1081100895428 /* DaySchedule+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE6013D20E1081100895428 /* DaySchedule+CoreDataProperties.swift */; };
+		BEE6014320E1081100895428 /* CoreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE6013E20E1081100895428 /* CoreDataHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +132,11 @@
 		BED9CD3D20CEB00B00C716CB /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		BED9CD3F20CEB20000C716CB /* Ingridient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingridient.swift; sourceTree = "<group>"; };
 		BED9CD4120CEB29500C716CB /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		BEE6013A20E1081100895428 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BEE6013B20E1081100895428 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BEE6013C20E1081100895428 /* DaySchedule+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DaySchedule+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BEE6013D20E1081100895428 /* DaySchedule+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DaySchedule+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BEE6013E20E1081100895428 /* CoreDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -314,6 +324,7 @@
 		BED9CD0920CEADD400C716CB /* MiniChanllenge */ = {
 			isa = PBXGroup;
 			children = (
+				BEE6013920E107D900895428 /* CoreData */,
 				2B71748020D406F3004EC19A /* Fonts */,
 				BED9CD0A20CEADD400C716CB /* AppDelegate.swift */,
 				BED9CD0C20CEADD400C716CB /* ViewController.swift */,
@@ -347,6 +358,18 @@
 				BED9CD2F20CEADD500C716CB /* Info.plist */,
 			);
 			path = MiniChanllengeUITests;
+			sourceTree = "<group>";
+		};
+		BEE6013920E107D900895428 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				BEE6013E20E1081100895428 /* CoreDataHandler.swift */,
+				BEE6013C20E1081100895428 /* DaySchedule+CoreDataClass.swift */,
+				BEE6013D20E1081100895428 /* DaySchedule+CoreDataProperties.swift */,
+				BEE6013A20E1081100895428 /* User+CoreDataClass.swift */,
+				BEE6013B20E1081100895428 /* User+CoreDataProperties.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -501,6 +524,7 @@
 				BEA12D5520D42DBB0015A526 /* LabelFormatter.swift in Sources */,
 				BEA12D5320D42C690015A526 /* AddCalendarViewController.swift in Sources */,
 				BEC294F820DDA46E00389F47 /* Refeicao.swift in Sources */,
+				BEE6013F20E1081100895428 /* User+CoreDataClass.swift in Sources */,
 				BE85396120DBC42A0097063F /* PlannerTableViewDelegate.swift in Sources */,
 				BED9CD4220CEB29500C716CB /* Recipe.swift in Sources */,
 				BEA12D5B20D444F60015A526 /* AddCalendarTableViewCell.swift in Sources */,
@@ -509,9 +533,11 @@
 				BED9CD0D20CEADD400C716CB /* ViewController.swift in Sources */,
 				BED9CD0B20CEADD400C716CB /* AppDelegate.swift in Sources */,
 				BEC326A520D93F2800DA05FC /* PlannerTableViewCell.swift in Sources */,
+				BEE6014220E1081100895428 /* DaySchedule+CoreDataProperties.swift in Sources */,
 				BEC326AE20D9AD1700DA05FC /* AddReceive2CollectionViewCell.swift in Sources */,
 				BEC294F620DDA41500389F47 /* RefeicaoSemana.swift in Sources */,
 				BE85397420DBEF040097063F /* PlanejamentoViewController.swift in Sources */,
+				BEE6014320E1081100895428 /* CoreDataHandler.swift in Sources */,
 				BE85397520DBEF040097063F /* MealPlanningOnWeek.swift in Sources */,
 				BEC326AA20D9795E00DA05FC /* AddReceiveCollectionViewCell.swift in Sources */,
 				BEA12D5720D43D050015A526 /* ButtonFormatter.swift in Sources */,
@@ -522,6 +548,8 @@
 				BEA12D6A20D922560015A526 /* PlannerCollectionViewCell.swift in Sources */,
 				BE80359920DC3FA800059788 /* SettingsViewController.swift in Sources */,
 				BEC326B220DA96AE00DA05FC /* RecipeViewControllerDelegate.swift in Sources */,
+				BEE6014020E1081100895428 /* User+CoreDataProperties.swift in Sources */,
+				BEE6014120E1081100895428 /* DaySchedule+CoreDataClass.swift in Sources */,
 				BED9CD4020CEB20000C716CB /* Ingridient.swift in Sources */,
 				BEA12D6820D920F80015A526 /* PlannerViewController.swift in Sources */,
 				BE85397C20DC22570097063F /* PlanejamentoTableViewCell.swift in Sources */,
